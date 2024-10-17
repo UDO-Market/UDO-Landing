@@ -32,16 +32,12 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1025px) {
     .navigationAdaptiv {
         ul {
             display: flex;
             list-style: none;
-
             li {
-                font-size: 20px;
-                padding: 0;
-
                 button {
                     background: transparent;
                     cursor: pointer;
@@ -49,19 +45,30 @@
 
                 .buttonAdaptiveLang {
                     display: flex;
-                    margin-right: 14px;
-
-                    button {
-                        margin-right: 9px;
-                    }
-
-                    h4 {
-                        width: 31px;
-                        text-align: center;
-                    }
+                    margin-right: 26px;
                 }
 
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
 
+}
+
+@media screen and (max-width: 480px) {
+    .navigationAdaptiv {
+        ul {
+            li {
+                .buttonAdaptiveLang {
+                    margin-right: 14px;
+                }
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
     }

@@ -3,15 +3,22 @@
     width: 1428px;
     margin: 0 auto;    
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1025px) {
     .visitingPageWhiteContainer{
         width: 100%;
         margin: 0;
+        margin-left: 90px;
+        padding-right: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .visitingPageWhiteContainer{
         margin-left: 25px;
         padding-right: 50px;
     }
 }
+
 
 .visitingPageBlackContainer{
     display: block;

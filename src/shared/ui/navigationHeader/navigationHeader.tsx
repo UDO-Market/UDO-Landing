@@ -7,7 +7,7 @@ import { TNavigationHeader } from "../../types/TNavigationHeader";
 export const NavigationHeader = ({navBar, setNavBar, scrollHeader, t, changeLanguages, i18n}: TNavigationHeader) => {
   return (
     <>
-      {window.screen.width > 480 ? (
+      {window.screen.width > 1025 ? (
         <nav className={styles.navigation}>
           <ul>
             <li>
@@ -53,13 +53,12 @@ export const NavigationHeader = ({navBar, setNavBar, scrollHeader, t, changeLang
                 >
                   <img src={icons_language} alt="icons_language" />
                 </Button>
-                <h4>{i18n.language == "ru" ? "Eng" : "Ru"}</h4>
               </div>
             </li>
 
             <li>
               <Button onClick={() => setNavBar(!navBar)}>
-                <img src={icons_bar} alt="" />
+                <img src={icons_bar} alt="icons_bar" />
               </Button>
             </li>
           </ul>

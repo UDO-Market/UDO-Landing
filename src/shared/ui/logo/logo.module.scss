@@ -9,6 +9,13 @@
     }
 
 }
+@media screen and (max-width: 1025px) {
+    .logo {
+        img {
+            height: 60px;
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .logo {
         img {
