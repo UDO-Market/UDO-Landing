@@ -4,7 +4,7 @@
 
     .partnersHeading {
         display: flex;
-
+        margin-bottom: 134px;
         h2 {
             margin-right: 30px;
             font-size: 80px;
@@ -19,9 +19,7 @@
     }
 
     .allPartners {
-        width: 1428px;
-        height: 507px;
-        margin-top: 134px;
+        width: 100%;
         aspect-ratio: 2.13;
         object-fit: contain;
         object-position: center;
@@ -100,33 +98,96 @@
     }
 }
 
+@media screen and (max-width: 1025px) {
+    .partnersContainer {
+        padding-top: 79px;
+        margin-bottom: 49px;
+
+        .partnersHeading {
+            margin-bottom: 76px;
+            h2 {
+                margin-right: 16px;
+                font-size: 42px;
+            }
+            img{
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        .allPartners {  
+            height: 250px;
+            img {
+                width: 107px;
+                height: 107px;
+                margin-right: 58px;
+                margin-bottom: 58px;
+            }
+
+            button {
+                width: 107px;
+                height: 107px;
+                img{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .modalContentPartners {
+        width: 100%;
+        height: 410px;
+        border-radius: 10px;
+    
+        .gif7Dugs {
+            width: 35%;
+            height: 170px;
+            margin-bottom: 30px;
+        }
+    
+        p {
+            width: 60%;
+            font-size: 20px;
+        }
+    
+        button {
+            width: 40%;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 25px;
+            img {
+                width: 22px;
+                height: 22px;
+                margin-right: 7px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 480px) {
     .partnersContainer {
         padding-top: 84px;
-        margin-bottom: 80px;
 
         .partnersHeading {
+            margin-bottom: 50px;
             h2 {
                 margin-right: 10px;
                 font-size: 33px;
             }
             img{
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
             }
     
         }
         .allPartners {
-            width: 100%;
-            height: 100%;
-            margin-top: 50px;
-
             img {
                 width: 85px;
                 height: 85px;
                 margin-right: 38px;
                 margin-bottom: 30px;
             }
+
             button {
                 width: 85px;
                 height: 85px;
@@ -139,26 +200,22 @@
     .modalContentPartners {
         width: 85%;
         height: 350px;
-        border-radius: 10px;
     
         .gif7Dugs {
-            width: 35%;
+            width: 38%;
             height: 130px;
             margin-bottom: 20px;
         }
     
         p {
             width: 70%;
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 16px;
         }
     
         button {
-            width: 60%;
+            width: 45%;
             height: 35px;
-            border-radius: 10px;
             font-size: 17px;
-            margin-bottom: 25px;
             img {
                 width: 18px;
                 height: 18px;

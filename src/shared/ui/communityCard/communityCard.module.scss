@@ -46,6 +46,35 @@
         }
     }
 }
+@media screen and (max-width: 1025px) {
+    .cardMain{
+        width: 100%;    
+        padding-top: 17px;
+        padding-bottom: 14px;
+        padding-left: 17px;
+        margin-right: 71px;
+
+        img{
+            width: 27px;
+            height: 27px;
+            margin-bottom: 18px;
+        }
+        h1{
+            font-size: 22px;
+            margin-bottom: 17px;
+        }
+        p{
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+        a{
+            font-size: 16px;
+            span{
+                margin-right: 1px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .cardMain{
         width: 100%;    
@@ -76,5 +105,4 @@
             }
         }
     }
-    
 }

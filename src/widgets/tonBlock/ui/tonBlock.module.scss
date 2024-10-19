@@ -94,44 +94,90 @@
         }
     }
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1025px) {
     .tonBlock {
         width: 100%;
-        margin-left: 25px;
-        padding-right: 50px;
+        margin-left: 90px;
+        padding-right: 180px;
         margin-bottom: 84px;
         padding-top: 84px;
+        
         button {
             width: 179px;
             height: 46px;
             padding-left: 24px;
-            font-size: 18px;
+            font-size: 19px;
             border-radius: 15px;
     
             &:hover {
-                padding-left: 45px;
+                padding-left: 41px;
             }
     
             img {
                 width: 40px;
                 height: 40px;
-                padding-left: 13px;
+                padding-left: 8px;
+            }
+        }
+    }
+
+    .headerBlock {
+        margin-bottom: 76px;
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-right: 16px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .cardsBlock {
+        margin-bottom: 24px;
+        img {  
+            width: 254px;
+            height: 352px;
+            margin-right: 41px;
+            &:last-child {
+                margin-right: auto;
+            }
+        }
+    }
+    .descriptionBlock {
+        p {
+            width: 55%;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 28px;
+        }
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .tonBlock {
+        margin-left: 25px;
+        padding-right: 50px;
+        margin-bottom: 84px;
+        padding-top: 84px;
+        button {
+            padding-left: 24px;
+            font-size: 18px;
+    
+            &:hover {
+                padding-left: 45px;
             }
         }
     }
 
     .headerBlock {
         margin-bottom: 50px;
-
         h1 {
             font-size: 34px;
             margin-right: 10px;
-        }
-
-        img {
-            width: 50px;
-            height: 50px;
         }
     }
 
@@ -142,17 +188,11 @@
             margin: 0 auto;
             width: 307px;
             height: 382px;
-            &:last-child {
-                margin-right: auto;
-            }
         }
     }
     .descriptionBlock {
-    
         p {
-            width: 100%;
-            font-size: 16px;
-            line-height: 20px;
+            width: 80%;
             margin-bottom: 36px;
         }
     }

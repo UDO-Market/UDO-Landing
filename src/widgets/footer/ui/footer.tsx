@@ -9,14 +9,30 @@ export const Footer = () => {
       <div className={styles.footerContant}>
         <h2>{window.screen.width > 480 ? "UDO Team" : "UDO"}</h2>
         <div>
-          <a href="https://t.me/udo_ton" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://t.me/udo_ton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={telegram_footer} alt="telegram_footer" />
           </a>
-          <a href="https://github.com/brokqwiks/UDO_" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/brokqwiks/UDO_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github_footer} alt="github_footer" />
           </a>
-          <a href="https://x.com/udomarket?s=21" target="_blank" rel="noopener noreferrer">
-            <img src={twitter_footer} alt="twitter_footer" />
+          <a
+            href="https://x.com/udomarket?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={twitter_footer}
+              alt="twitter_footer"
+              className={styles.twitterIcon}
+            />
           </a>
         </div>
 

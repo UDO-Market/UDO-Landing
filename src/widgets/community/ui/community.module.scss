@@ -9,14 +9,16 @@
 
     h1 {
         font-size: 80px;
+        font-weight: 800;
         margin-right: 24px;
+    }
+    .userIcon {
+        width: 96px;
+        height: 96px;
     }
 }
 
-.userIcon {
-    width: 96px;
-    height: 96px;
-}
+
 
 .communityCards {
     display: flex;
@@ -47,11 +49,43 @@
 
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1025px) {
     .communitySection{
         margin-bottom: 80px;
         padding-top: 80px;
     }
+    .communityHeader {
+        margin-bottom: 76px;
+    
+        h1 {
+            font-size: 42px;
+            margin-right: 16px;
+        }
+        .userIcon{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .contactButton {
+        width: 235px;
+        height: 53px;
+        margin-top: 70px;
+        font-size: 23px;
+        border-radius: 11px;
+        transition: .5s;
+        cursor: pointer;
+    
+        &:hover {
+            transform: scale(1.03);
+        }
+        img{
+            padding-left: 10px;
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
     .communityHeader {
         margin-bottom: 50px;
     
@@ -59,11 +93,8 @@
             font-size: 34px;
             margin-right: 10px;
         }
-        img{
-            width: 50px;
-            height: 50px;
-        }
     }
+
     .communityCards{
         display: block;
     }

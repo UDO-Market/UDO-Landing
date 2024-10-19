@@ -13,6 +13,14 @@ export const CommunityCard = ({
   const [hover, setHover] = useState(false);
   const { i18n } = useMyTranslate();
 
+  const widthParagraf = () => {
+    if(window.screen.width < 480){
+      return i18n.language == 'en' ? '255px' : '336px'
+    }else if(window.screen.width < 1025){
+      return i18n.language == 'en' ? '120px' : '170px'
+    }
+  }
+  
   return (
     <article
       className={styles.cardMain}
@@ -20,17 +28,20 @@ export const CommunityCard = ({
       onMouseLeave={() => setHover(false)}
     >
       <img src={icon} alt="" />
+
       <h1>{name}</h1>
-      <p style={{ width: i18n.language == "en" ? "255px" : "336px" }}>
+
+      <p style={{ width: widthParagraf() }}>  
         {descr}
       </p>
+
       <a href={url} target="_blank" id="123" rel="noopener noreferrer">
         {aboutBtn}
         <span
           style={{
             display: "inline-block",
             transform:
-              window.screen.width > 480
+              window.screen.width > 1025
                 ? hover
                   ? "translateX(20px)"
                   : "translateX(0)"
