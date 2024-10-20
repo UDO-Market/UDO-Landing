@@ -4,6 +4,7 @@ import { QuarterSection } from "../model/quarterSection";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import roadMap_line from '/icons/roadMap_line.png'
 import roadMap_line_mobile from '/icons/roadMap_line_mobile.png'
+import roadMap_line_tablet from '/icons/roadMap_line_tablet.png'
 import clip_path from '/icons/clip_path.png'
 
 
@@ -11,10 +12,19 @@ export const RoadMap = () => {
   
   const {t} = useMyTranslate()
 
+  const sizeRodmap = () => {
+    if(window.window.screen.width < 485){
+      return roadMap_line_mobile
+    }else if(window.window.screen.width < 1025){
+      return roadMap_line_tablet
+    }else{
+      return roadMap_line
+    }
+  }
   return (
     <section className={styles.roadMapSection}>
       <div className={styles.titleContainer}>
-        <h1>{t('sectionRoadMap')}</h1>
+        <h3>{t('sectionRoadMap')}</h3>
         <img
             src={clip_path}
             alt="Road Map"
@@ -22,7 +32,7 @@ export const RoadMap = () => {
       </div>
       <div className={styles.timelineContainer}>
         <img
-          src={window.screen.width > 481 ? roadMap_line : roadMap_line_mobile}
+          src={sizeRodmap()}
           alt="roadMap_line"
           className={styles.timelineIcon}
         />

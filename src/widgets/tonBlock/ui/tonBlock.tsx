@@ -16,10 +16,10 @@ export const TonBlock = () => {
   return (
     <section className={styles.tonBlock}>
       <div className={styles.headerBlock}>
-        <h1>
+        <h2>
           {t("sectionTonWalletTitle1Word")}
           <span> {t("sectionTonWalletTitle2Word")}</span>
-        </h1>
+        </h2>
         <img src={toncoin} alt="toncoin" />
       </div>
       <div className={styles.cardsBlock}>

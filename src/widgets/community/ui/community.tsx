@@ -15,7 +15,7 @@ export const Community = () => {
   return (
     <section className={styles.communitySection}>
       <div className={styles.communityHeader}>
-        <h1>{t("sectionCommunityTitle")}</h1>
+        <h3>{t("sectionCommunityTitle")}</h3>
         <img
           src={user_icon}
           alt="user_icon"

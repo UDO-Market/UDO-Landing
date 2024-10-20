@@ -17,8 +17,8 @@ export const About = () => {
       <div>
         <div className={styles.aboutHeader}>
           <div className={styles.containerHeader}>
-            <h1 className={styles.aboutText}>{t('sectionAboutTitle')}</h1>
-            <h1>UDO</h1>
+            <h2 className={styles.aboutText}>{t('sectionAboutTitle')}</h2>
+            <h2>UDO</h2>
           </div>
           <p>
            {t('sectionAboutDescription')}

@@ -20,7 +20,7 @@ export const Partners = () => {
     <section className={styles.partnersContainer}>
 
       <div className={styles.partnersHeading}>
-        <h2>{t('sectionOurPartners')}</h2>
+        <h3>{t('sectionOurPartners')}</h3>
         <img src={icon_users_partners} alt="icon_users_partners" />
       </div>
 

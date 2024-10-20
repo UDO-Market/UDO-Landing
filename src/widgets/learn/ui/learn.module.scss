@@ -8,7 +8,7 @@
     margin-bottom: 24px;
     display: flex;
 
-    h2 {
+    h4 {
         font-size: 90px;
         margin-right: 33px;
     }
@@ -44,8 +44,7 @@
 
 
 .learnBtnsAndFAQ {
-    padding-bottom: 10px;
-
+    margin-right: 110px;
     p {
         position: relative;
         bottom: 0;
@@ -61,13 +60,11 @@
 
     .learnBtnsContainer {
         margin-bottom: 200px;
-        margin-right: 110px;
-
     }
 }
 
 .learnInfo {
-    h3 {
+    h5 {
         font-size: 30px;
         font-weight: 700;
         margin-bottom: 26px;
@@ -92,9 +89,7 @@
         height: 615px;
     }
 }
-
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1025px) {
     .learnContainer {
         margin-bottom: 80px;
         padding-top: 80px;
@@ -103,12 +98,13 @@
         width: 100%;
         margin: 0 auto;
     }
+    
     .learnHeading {
         margin-bottom: 10px;
 
-        h2 {
-            font-size: 34px;
-            margin-right: 10px;
+        h4 {
+            font-size: 42px;
+            margin-right: 16px;
         }
 
         img {
@@ -120,12 +116,63 @@
     .learnProtectText {
         width: 320px;
         font-size: 16px;
+        margin-bottom: 43px;
+    }
+
+    .learnContent {
+        padding-top: 47px;
+        height: 363px;
+    }
+
+    .learnBtnsAndFAQ {
+        margin-right: 8%;
+        p {
+            height: 59px;
+            padding-left: 20px;
+            font-size: 8px;
+        }
+    
+        .learnBtnsContainer {
+            margin-bottom: 133px;
+        }
+        
+    }
+    .learnInfo {
+        
+        h5 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    
+        p {
+            width: 40%;
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 16px;
+            margin-right: 20px;
+        }
+    }
+
+    .learnImg {
+        img {
+            height: 320px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .learnHeading {
+        h4 {
+            font-size: 34px;
+            margin-right: 10px;
+        }
+    }
+
+    .learnProtectText {
         margin-bottom: 35px;
     }
 
     .learnBtnsAndFAQ {
-        padding-bottom: 0;
-    
         p {
             height: 59px;
             padding-left: 46px;
@@ -148,7 +195,7 @@
     .learnInfo {
         padding-left: 18px;
         padding-right: 18px;
-        h3 {
+        h5 {
             font-size: 26px;
             margin-bottom: 16px;
         }
@@ -158,18 +205,16 @@
             padding-bottom: 16px;
             margin-bottom: 0;
             font-size: 16px;
+            line-height: 30px;
         }
     }
     .learnImg {    
         img {
             display: block;
-            position: absolute;
             width: 282px;
             height: 294px;
             margin: 0 auto;
-            bottom: 0;
             left: 0;
-            right: 0;
         }
     }
 }

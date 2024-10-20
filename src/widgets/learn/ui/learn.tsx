@@ -13,7 +13,7 @@ export const Learn = () => {
   return (
     <section className={styles.learnContainer}>
       <div className={styles.learnHeading}>
-        <h2>{t("sectionLearnTitle")}</h2>
+        <h4>{t("sectionLearnTitle")}</h4>
         <img src={icon_learn} alt="icon_learn" />
       </div>
 
@@ -65,14 +65,15 @@ export const Learn = () => {
 
           <div
             className={styles.learnInfo}
+            //Доработать height
             style={{
               height:
                 i18n.language == "ru" || window.screen.width > 480
-                  ? "670px"
+                  ? "607px"
                   : "605px",
             }}
           >
-            <h3>{selectedDescription.title}</h3>
+            <h5>{selectedDescription.title}</h5>
             <p>{selectedDescription.paragraf1}</p>
             <p>{selectedDescription.paragraf2}</p>
           </div>

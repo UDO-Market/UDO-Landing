@@ -26,6 +26,27 @@
     }
 
 }
+@media screen and (max-width: 1025px) {
+    .learnButton {
+        padding-left: 20px;
+        width: 210px;
+        height: 48px;
+        font-size: 14px;
+        border-right: 3px solid #3C4173;
+    
+        &:focus {
+            border-right: 3px solid #2562FF;
+        }
+    
+        img {
+            width: 28px;
+            height: 28px;
+            margin-right: 25px;
+        }
+    
+    }
+}
+
 @media screen and (max-width: 480px) {
     .learnButton {
         display: flex;

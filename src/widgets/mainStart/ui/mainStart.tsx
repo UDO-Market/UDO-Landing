@@ -21,7 +21,7 @@ export const MainStart = () => {
         <div className={styles.logoUdoContainer}>
           <h1>{displayedText}</h1>
         </div>
-        <span className={styles.highlight}>Market-Place</span>
+        <h1 className={styles.highlight}>Market-Place</h1>
         <p>
           {t("mainDescription")}
         </p>
