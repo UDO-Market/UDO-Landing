@@ -13,9 +13,8 @@
         margin: 0 auto;
         margin-bottom: 64px;
         font-size: 30px;
-        font-weight: 600;
-        color: #333;
-
+        font-weight: 700;
+        color: black;
     }
 
     button {
@@ -184,6 +183,39 @@
                 height: 25px;
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .mainSection {
+        padding-top: 146px;
+        margin-bottom: 80px;
+    }
+
+    .logoUdoContainer {
+        h1 {
+            height: 95px;
+            font-size: 72px;
+        }
+    }
+
+    .highlight {
+        margin-bottom: 22px;
+        font-size: 62px;
+    }
+    
+    .mainContent {
+        p {
+            width: 480px;
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 200px;
+            height: 54px;
+            font-size: 25px;
         }
     }
 }

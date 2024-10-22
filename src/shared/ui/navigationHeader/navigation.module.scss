@@ -57,6 +57,19 @@
     }
 
 }
+@media screen and (max-width:769px) {
+    .navigationAdaptiv {
+        ul {
+            li {
+                img {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+ 
+}
 
 @media screen and (max-width: 480px) {
     .navigationAdaptiv {

@@ -24,7 +24,7 @@ export const About = () => {
            {t('sectionAboutDescription')}
           </p>
         </div>
-        <div className={window.screen.width > 480 ? styles.aboutButtons : styles.aboutButtonsMobileAdaptiv}>
+        <div className={window.screen.width > 769 ? styles.aboutButtons : styles.aboutButtonsMobileAdaptiv}>
           <Button className={styles.buttoRocket}>{t('sectionAboutButtonFast')} <img src={rocket} alt="rocket" /></Button>
           <Button>{t('sectionAboutButtonSafe')}</Button>
           <Button onClick={() => open('https://t.me/brokqwiks')}>{t('sectionAboutButtonSupport')}</Button>

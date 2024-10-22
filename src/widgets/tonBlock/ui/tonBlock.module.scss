@@ -157,6 +157,58 @@
     }
 
 }
+
+@media screen and (max-width: 769px) {
+    .tonBlock {
+        margin-left: 25px;
+        padding-right: 50px;
+        margin-bottom: 100px;
+        padding-top: 84px;
+
+        button {
+            width: 222px;
+            height: 56px;
+            padding-left: 28px;
+            font-size: 24px;
+    
+            &:hover {
+                padding-left: 50px;
+            }
+
+            img {
+                width: 36px;
+                height: 36px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .headerBlock {
+        margin-bottom: 64px;
+        h2 {
+            font-size: 48px;
+            margin-right: 16px;
+        }
+    }
+
+    .cardsBlock {
+        margin-bottom: 24px;
+        img {
+            width: 217px;
+            height: 300px;
+            margin-right: 30px;
+        }
+       
+    }
+    .descriptionBlock {
+        p {
+            width: 70%;
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
+    }
+
+}
 @media screen and (max-width: 480px) {
     .tonBlock {
         margin-left: 25px;

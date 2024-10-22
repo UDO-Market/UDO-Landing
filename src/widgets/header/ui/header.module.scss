@@ -50,7 +50,23 @@
         }
     }
 }
+@media screen and (max-width: 769px) {
+    .header {
+        padding: 15px 25px;
+    }
+    .navigationBar {
+        margin-top: 22px;
+        padding-top: 30px;
 
+        li {
+            padding-left: 25px;
+            margin-bottom: 40px;
+            button{
+                font-size: 22px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .header {
         padding: 17px 24px;
