@@ -127,7 +127,7 @@
     .learnBtnsAndFAQ {
         margin-right: 8%;
         p {
-            height: 59px;
+            // height: 59px;
             padding-left: 20px;
             font-size: 8px;
         }
@@ -159,6 +159,13 @@
         }
     }
 }
+@media screen and (max-width: 769px) {
+    .learnContainer {
+        margin-bottom: 105px;
+        padding-top: 105px;
+    }
+    
+}
 
 @media screen and (max-width: 480px) {
     .learnHeading {
@@ -173,6 +180,7 @@
     }
 
     .learnBtnsAndFAQ {
+        margin-right: 0;
         p {
             height: 59px;
             padding-left: 46px;

@@ -20,7 +20,6 @@
 
     .allPartners {
         width: 100%;
-        aspect-ratio: 2.13;
         object-fit: contain;
         object-position: center;
 
@@ -116,7 +115,6 @@
         }
 
         .allPartners {  
-            height: 250px;
             img {
                 width: 107px;
                 height: 107px;
@@ -160,6 +158,38 @@
                 height: 22px;
                 margin-right: 7px;
             }
+        }
+    }
+}
+@media screen and (max-width: 769px) {
+    .partnersContainer {
+        padding-top: 82px;
+        margin-bottom: 82px;
+
+        .partnersHeading {
+            margin-bottom: 64px;
+            h3 {
+                font-size: 48px;
+            }
+            img{
+                width: 58px;
+                height: 58px;
+            }
+        }
+        .allPartners {  
+            img {
+                margin-right: 68px;
+                margin-bottom: 68px;
+            }
+        }
+    }
+    .modalContentPartners {
+        width: 90%;
+        .gif7Dugs {
+            width: 35%;
+        }
+        p {
+            width: 65%;
         }
     }
 }

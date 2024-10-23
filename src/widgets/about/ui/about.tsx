@@ -9,12 +9,14 @@ import duck5 from "/gif/duck5.gif";
 import rocket from "/svg/rocket.svg";
 
 export const About = () => {
+  
   const {t} = useMyTranslate()
+
   const gif_array = [duck1, duck2, duck3, duck4, duck5];
   
   return (
     <section className={styles.about}>
-      <div>
+      <div className={styles.aboutContainer}>
         <div className={styles.aboutHeader}>
           <div className={styles.containerHeader}>
             <h2 className={styles.aboutText}>{t('sectionAboutTitle')}</h2>

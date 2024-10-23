@@ -1,6 +1,6 @@
 .roadMapSection {
     padding-top: 156px;
-    margin-bottom: 204px;   
+    margin-bottom: 204px;
 }
 
 .titleContainer {
@@ -49,7 +49,8 @@
     display: flex;
     align-self: stretch;
     margin-bottom: 50px;
-    h4{
+
+    h4 {
         width: 284px;
         font-size: 46px;
     }
@@ -73,6 +74,7 @@
     border: 3px solid #018eff;
     transition: .3s ease-in-out;
     cursor: pointer;
+
     img {
         aspect-ratio: 1;
         object-fit: contain;
@@ -86,23 +88,26 @@
         flex-grow: 1;
         font-size: 30px;
     }
-    &:hover{
-        transform: scale(1.03);   
+
+    &:hover {
+        transform: scale(1.03);
     }
 }
+
 @media screen and (max-width: 1025px) {
     .roadMapSection {
         padding-top: 73px;
-        margin-bottom: 72px;   
+        margin-bottom: 72px;
     }
+
     .titleContainer {
         margin-bottom: 76px;
-    
+
         h3 {
             font-size: 42px;
             margin-right: 16px;
         }
-    
+
         img {
             width: 52px;
             height: 52px;
@@ -115,28 +120,84 @@
             height: 100%;
         }
     }
+
     .quarterSection {
         margin-bottom: 31px;
-        h4{
+
+        h4 {
             width: 112px;
             font-size: 26px;
         }
     }
+
     .milestoneContainer {
         width: 74%;
         gap: 15px;
         margin-left: 45px;
     }
+
     .milestone {
         padding: 14px 30px;
         border-radius: 15px;
         border: 3px solid #018eff;
+
         img {
             width: 23px;
             height: 23px;
             margin-right: 10px;
         }
-    
+
+        div {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .roadMapSection {
+        padding-top: 108px;
+        margin-bottom: 108px;
+    }
+
+    .titleContainer {
+        margin-bottom: 64px;
+
+        h3 {
+            font-size: 48px;
+        }
+
+        img {
+            width: 58px;
+            height: 58px;
+        }
+    }
+
+    .quarterSection {
+        margin-bottom: 26px;
+
+        h4 {
+            width: 101px;
+            font-size: 22px;
+        }
+    }
+
+    .milestoneContainer {
+        width: 74%;
+        gap: 15px;
+        margin-left: 30px;
+    }
+
+    .milestone {
+        padding: 12px 26px;
+        border-radius: 15px;
+        border: 3px solid #018eff;
+
+        img {
+            width: 23px;
+            height: 23px;
+            margin-right: 10px;
+        }
+
         div {
             font-size: 16px;
         }
@@ -149,14 +210,15 @@
         margin-bottom: 0;
         padding-bottom: 80px;
     }
+
     .titleContainer {
         margin-bottom: 59px;
-    
+
         h3 {
             font-size: 34px;
             margin-right: 10px;
         }
-    
+
         img {
             object-fit: contain;
             object-position: center;
@@ -165,7 +227,7 @@
     }
 
     .timelineContainer {
-    
+
         .timelineIcon {
             width: 15px;
             height: 980px;
@@ -174,8 +236,9 @@
 
     .quarterSection {
         display: block;
-        margin-bottom: 49px;
-        h4{
+        margin-bottom: 37px;
+
+        h4 {
             width: 130px;
             font-size: 26px;
             margin-bottom: 18px;
@@ -184,7 +247,8 @@
 
     .milestoneContainer {
         display: flex;
-        width: 215px;
+        width: 214px;
+        margin-left: 0;
     }
 
     .milestone {
@@ -192,14 +256,15 @@
         align-items: center;
         border-radius: 10px;
         border: 2px solid #018eff;
+
         img {
             width: 18px;
             margin-right: 6px;
         }
-    
+
         div {
             font-size: 16px;
         }
     }
-    
+
 }

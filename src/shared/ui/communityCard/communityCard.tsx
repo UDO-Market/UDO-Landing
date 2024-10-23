@@ -17,7 +17,7 @@ export const CommunityCard = ({
     if(window.screen.width < 480){
       return i18n.language == 'en' ? '255px' : '336px'
     }else if(window.screen.width < 769){
-      return i18n.language == 'en' ? '60%' : '60%' 
+      return i18n.language == 'en' ? '65%' : '65%' 
     }else if(window.screen.width < 1025){
       return i18n.language == 'en' ? '120px' : '170px'
     }

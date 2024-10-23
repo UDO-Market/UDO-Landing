@@ -1,6 +1,7 @@
 import styles from "./tonBlock.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import 'swiper/scss/navigation';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button/button";
 import telegram_wallet_img from "/icons/telegram_wallet_block.png";
@@ -8,6 +9,7 @@ import tonkeeper_wallet_img from "/icons/tonkeeper_wallet_block.png";
 import tonconnect_img from "/icons/tonconnect_block.png";
 import toncoin_icon3 from "/svg/toncoin3.svg";
 import toncoin from "/icons/icon_ton.png";
+import { Navigation } from "swiper/modules";
 
 export const TonBlock = () => {
   
@@ -23,7 +25,7 @@ export const TonBlock = () => {
         <img src={toncoin} alt="toncoin" />
       </div>
       <div className={styles.cardsBlock}>
-        {window.screen.width > 481 ? (
+        {window.screen.width > 769 ? (
           <>
             <img
               src={telegram_wallet_img}
@@ -40,8 +42,10 @@ export const TonBlock = () => {
           </>
         ) : (
           <Swiper
+            modules={[Navigation]}
             spaceBetween={50}
             slidesPerView={1}
+            navigation
           >
             <SwiperSlide>
               <img

@@ -11,6 +11,7 @@
         padding-right: 180px;
     }
 }
+
 @media screen and (max-width: 769px) {
     .visitingPageWhiteContainer{
         margin-left: 25px;
@@ -18,12 +19,6 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    .visitingPageWhiteContainer{
-        margin-left: 25px;
-        padding-right: 50px;
-    }
-}
 
 
 .visitingPageBlackContainer{
@@ -44,8 +39,7 @@
         }
     }
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 769px) {
     .visitingPageBlackContainer{
         .visitingPageBlack{
             margin-left: 25px;
@@ -53,6 +47,7 @@
         }
     }
 }
+
 
 .dottedBlue{
     display: block;

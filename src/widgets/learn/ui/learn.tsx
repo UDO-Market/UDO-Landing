@@ -69,8 +69,8 @@ export const Learn = () => {
             style={{
               height:
                 i18n.language == "ru" || window.screen.width > 480
-                  ? "607px"
-                  : "605px",
+                  ? "670px"
+                  : "607px",
             }}
           >
             <h5>{selectedDescription.title}</h5>

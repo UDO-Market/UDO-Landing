@@ -51,6 +51,25 @@
         }
     }
 }
+@media screen and (max-width: 769px) {
+    .footer {
+        .footerContant {
+            margin-top: 34px;
+
+            h2 {
+                font-size: 15px;
+            }
+
+            img {
+                margin-right: 15px;
+            }
+
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .footer {
         padding-bottom: 24px;
