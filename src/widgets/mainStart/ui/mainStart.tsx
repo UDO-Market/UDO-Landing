@@ -7,6 +7,7 @@ import { Button } from "../../../shared/ui/button/button";
 import { handleTG } from "../../../features/handleTG/handleTG";
 import gif_6 from "/gif/duck6.gif";
 import icons_tg from "/icons/icon_tg.png";
+import { Cross } from "../../../shared/ui/cross/cross";
 
 export const MainStart = () => {
   
@@ -35,7 +36,7 @@ export const MainStart = () => {
       </div>
 
       <Modal isOpen={modal} className={styles.modalContent}>
-        <span onClick={() => setModal(false)}>x</span>
+        <span><Cross setCross={setModal}/></span>
         <img src={gif_6} alt="gifDucks6" className={styles.gif6Dugs} />
         <p>{t('mainModalDescription')}</p>
         <Button

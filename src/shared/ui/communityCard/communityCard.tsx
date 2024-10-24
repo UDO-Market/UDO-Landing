@@ -19,7 +19,7 @@ export const CommunityCard = ({
     }else if(window.screen.width < 769){
       return i18n.language == 'en' ? '65%' : '65%' 
     }else if(window.screen.width < 1025){
-      return i18n.language == 'en' ? '120px' : '170px'
+      return i18n.language == 'en' ? '66%' : '72%'
     }
   }
   
@@ -29,7 +29,7 @@ export const CommunityCard = ({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <img src={icon} alt="" />
+      <img src={icon} alt="icon" />
 
       <h1>{name}</h1>
 

@@ -47,7 +47,7 @@ export const useLearnLogic = () => {
 
 
   const buttonTexts = useMemo(() => {
-    const isMobile = window.screen.width <= 480;
+    const isMobile = window.screen.width <= 768;
 
     return {
       smartContract: isMobile
@@ -67,7 +67,7 @@ export const useLearnLogic = () => {
     const decentralisationMobilka = "/icons/decentralisation_mobilka.png";
 
     if (id === 1) {
-      return window.screen.width > 481
+      return window.screen.width > 769
         ? decentralisation
         : decentralisationMobilka;
     } else {

@@ -136,11 +136,14 @@
     }
 
     .cardsBlock {
+        width: 550px;
         margin-bottom: 24px;
+        margin: 0 auto;
         img {  
+            display: block;
+            margin: 0 auto;
             width: 254px;
             height: 352px;
-            margin-right: 41px;
             &:last-child {
                 margin-right: auto;
             }
@@ -190,15 +193,9 @@
     }
 
     .cardsBlock {
-        margin-bottom: 24px;
-        width: 420px;
-        margin: 0 auto;
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-       
+        width: 440px;
     }
+
     .descriptionBlock {
         p {
             width: 85%;
@@ -225,7 +222,7 @@
     }
 
     .headerBlock {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         h2 {
             font-size: 34px;
             margin-right: 10px;
@@ -233,17 +230,16 @@
     }
 
     .cardsBlock {
+        width: 100%;
         margin-bottom: 30px;
         img {
-            display: block;
-            margin: 0 auto;
-            width: 307px;
-            height: 382px;
+            width: 210px;
+            height: 290px;
         }
     }
     .descriptionBlock {
         p {
-            width: 80%;
+            width: 85%;
             margin-bottom: 36px;
         }
     }

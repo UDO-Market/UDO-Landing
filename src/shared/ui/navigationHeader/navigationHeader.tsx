@@ -1,10 +1,19 @@
-import { Button } from "../button";
 import styles from "./navigation.module.scss";
+import { Button } from "../button";
+import { TNavigationHeader } from "../../types/TNavigationHeader";
+import { Cross } from "../cross/cross";
 import icons_language from "/svg/icon_language.svg";
 import icons_bar from "/svg/icon_bars.svg";
-import { TNavigationHeader } from "../../types/TNavigationHeader";
 
-export const NavigationHeader = ({navBar, setNavBar, scrollHeader, t, changeLanguages, i18n}: TNavigationHeader) => {
+export const NavigationHeader = ({
+  navBar,
+  setNavBar,
+  scrollHeader,
+  t,
+  changeLanguages,
+  i18n,
+}: TNavigationHeader) => {
+
   return (
     <>
       {window.screen.width > 1025 ? (
@@ -58,7 +67,11 @@ export const NavigationHeader = ({navBar, setNavBar, scrollHeader, t, changeLang
 
             <li>
               <Button onClick={() => setNavBar(!navBar)}>
-                <img src={icons_bar} alt="icons_bar" />
+                {!navBar ? (
+                  <img src={icons_bar} alt="icons_bar" />
+                ) : (
+                  <Cross setCross={setNavBar}/>
+                )}
               </Button>
             </li>
           </ul>

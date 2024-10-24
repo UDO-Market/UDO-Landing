@@ -22,7 +22,7 @@ export const Learn = () => {
       <aside className={styles.learnMainInfoAndImg}>
         <div
           className={
-            window.screen.width > 480
+            window.screen.width > 769
               ? styles.learnContent
               : styles.learnContentMobileAdaptiv
           }
@@ -49,7 +49,7 @@ export const Learn = () => {
               />
             </div>
 
-            {window.screen.width > 480 && (
+            {window.screen.width > 769 && (
               <p>
                 {t("sectionLearnFAQ")} {""}
                 <a
@@ -65,7 +65,6 @@ export const Learn = () => {
 
           <div
             className={styles.learnInfo}
-            //Доработать height
             style={{
               height:
                 i18n.language == "ru" || window.screen.width > 480

@@ -104,7 +104,9 @@
         margin-bottom: 96px;
         padding-top: 135px;
     }
-
+    .aboutContainer{
+        width: 460px;
+    }
     .aboutHeader {
         width: 100%;
         margin-top: 39px;
@@ -136,7 +138,7 @@
             font-size: 20px;
 
             &:first-child {
-                margin-right: 24px;
+                margin-right: 5%;
     
                 &:hover {
                     background: white;
@@ -146,7 +148,7 @@
             }
     
             &:last-child {
-                margin-left: 24px;
+                margin-left: 5%;
             }
 
             img {
@@ -156,7 +158,7 @@
     }
 
     .gifBlock {
-        margin-left: 82px;
+        margin-left: 8%;
         img {
             width: 255px;
             height: 255px;

@@ -25,7 +25,7 @@ export const TonBlock = () => {
         <img src={toncoin} alt="toncoin" />
       </div>
       <div className={styles.cardsBlock}>
-        {window.screen.width > 769 ? (
+        {window.screen.width > 1025 ? (
           <>
             <img
               src={telegram_wallet_img}

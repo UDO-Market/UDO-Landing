@@ -10,6 +10,7 @@ import icon_tg from "/icons/icon_tg.png";
 import ton_nest_lvl2 from "/icons/ton_nest_lvl2.jpg";
 import add_new_partners from "/icons/add_new_partners.png";
 import move_partner from "/icons/move_partner.jpg"
+import { Cross } from "../../../shared/ui/cross/cross";
 
 export const Partners = () => {
 
@@ -34,7 +35,7 @@ export const Partners = () => {
       </div>
 
       <Modal isOpen={modal} className={styles.modalContentPartners}>
-          <span onClick={() => setModal(false)}>x</span>
+          <span><Cross setCross={setModal}/></span>
           <img src={gif_7} alt="gif_7_dugs" className={styles.gif7Dugs} />
           <Button
             onClick={() => {
