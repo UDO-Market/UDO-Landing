@@ -271,3 +271,24 @@
         }
     }
 }
+@media screen and (max-width: 368px) {
+    .mainSection {
+        padding-top: 120px;
+    }
+    .highlight {
+        font-size: 45px;
+    }
+    .logoUdoContainer {
+        width: 139px;
+        h1 {
+            height: 70px;
+            font-size: 58px;
+        }
+    }
+    .mainContent {
+        p {
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+    }
+}

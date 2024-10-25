@@ -5,6 +5,7 @@
 
 .titleContainer {
     display: flex;
+    align-items: center;
     margin-bottom: 134px;
 
     h3 {
@@ -16,6 +17,7 @@
     img {
         width: 96px;
         height: 96px;
+        
     }
 }
 
@@ -267,4 +269,14 @@
         }
     }
 
+}
+@media screen and (max-width: 351px) {
+    .titleContainer{
+        h3{
+            font-size: 29px;
+        }
+        img{
+            width: 40px;
+        }
+    }
 }

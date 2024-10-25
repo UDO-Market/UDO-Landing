@@ -5,13 +5,15 @@
     .partnersHeading {
         display: flex;
         margin-bottom: 134px;
+
         h3 {
             margin-right: 30px;
             font-size: 80px;
             font-weight: 800;
             color: #fff;
         }
-        img{
+
+        img {
             width: 96px;
             height: 96px;
         }
@@ -37,7 +39,8 @@
             margin-bottom: 107px;
             border-radius: 20px;
             transition: .4s ease-in-out;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.04);
             }
         }
@@ -104,17 +107,19 @@
 
         .partnersHeading {
             margin-bottom: 76px;
+
             h3 {
                 margin-right: 16px;
                 font-size: 42px;
             }
-            img{
+
+            img {
                 width: 52px;
                 height: 52px;
             }
         }
 
-        .allPartners {  
+        .allPartners {
             img {
                 width: 107px;
                 height: 107px;
@@ -125,34 +130,37 @@
             button {
                 width: 107px;
                 height: 107px;
-                img{
+
+                img {
                     margin-right: 0;
                 }
             }
         }
     }
+
     .modalContentPartners {
         width: 100%;
         height: 410px;
         border-radius: 10px;
-    
+
         .gif7Dugs {
             width: 35%;
             height: 170px;
             margin-bottom: 30px;
         }
-    
+
         p {
             width: 60%;
             font-size: 20px;
         }
-    
+
         button {
             width: 40%;
             height: 40px;
             border-radius: 10px;
             font-size: 20px;
             margin-bottom: 25px;
+
             img {
                 width: 22px;
                 height: 22px;
@@ -161,6 +169,7 @@
         }
     }
 }
+
 @media screen and (max-width: 769px) {
     .partnersContainer {
         padding-top: 82px;
@@ -168,26 +177,32 @@
 
         .partnersHeading {
             margin-bottom: 64px;
+
             h3 {
                 font-size: 48px;
             }
-            img{
+
+            img {
                 width: 58px;
                 height: 58px;
             }
         }
-        .allPartners {  
+
+        .allPartners {
             img {
                 margin-right: 68px;
                 margin-bottom: 68px;
             }
         }
     }
+
     .modalContentPartners {
         width: 90%;
+
         .gif7Dugs {
             width: 35%;
         }
+
         p {
             width: 65%;
         }
@@ -200,16 +215,19 @@
 
         .partnersHeading {
             margin-bottom: 50px;
+
             h3 {
                 margin-right: 10px;
                 font-size: 33px;
             }
-            img{
+
+            img {
                 width: 40px;
                 height: 40px;
             }
-    
+
         }
+
         .allPartners {
             img {
                 width: 85px;
@@ -221,36 +239,57 @@
             button {
                 width: 85px;
                 height: 85px;
-                img{
+
+                img {
                     margin-right: 0;
                 }
             }
         }
     }
+
     .modalContentPartners {
         width: 85%;
         height: 350px;
-    
+
         .gif7Dugs {
             width: 38%;
             height: 130px;
             margin-bottom: 20px;
         }
-    
+
         p {
             width: 70%;
             font-size: 16px;
         }
-    
+
         button {
             width: 45%;
             height: 35px;
             font-size: 17px;
+
             img {
                 width: 18px;
                 height: 18px;
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 351px) {
+    .partnersContainer {
+        .partnersHeading {
+
+            h3 {
+                margin-right: 10px;
+                font-size: 27px;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
         }
     }
 }

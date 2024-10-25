@@ -32,12 +32,15 @@ export const About = () => {
           <Button onClick={() => open('https://t.me/brokqwiks')}>{t('sectionAboutButtonSupport')}</Button>
         </div>
       </div>
-      <div className={styles.gifBlock}>
+      {window.screen.width > 425 && (
+        <div className={styles.gifBlock}>
         <img
           src={gif_array[Math.floor(Math.random() * gif_array.length)]}
           alt="gif_dugs"
         />
       </div>
+      )}
+      
     </section>
   );
 };
