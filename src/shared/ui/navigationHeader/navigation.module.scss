@@ -1,16 +1,16 @@
 .navigation {
-    justify-self: center;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
     ul {
         display: flex;
         list-style: none;
-        gap: 80px;
-
+        width: 510px;
         li {
             text-decoration: none;
             color: #000;
             padding: 10px;
-
+            margin-right: 6.2%;
             &:last-child {
                 position: absolute;
                 right: 0;
@@ -34,6 +34,9 @@
 
 @media screen and (max-width: 1025px) {
     .navigationAdaptiv {
+        width: 100%;
+        display: flex;
+        justify-content: right;
         ul {
             display: flex;
             list-style: none;

@@ -23,6 +23,7 @@
 
 .timelineContainer {
     display: flex;
+    position: relative;
     gap: 28px;
     font-family: Inter, sans-serif;
     color: #fff;
@@ -30,8 +31,11 @@
     flex-wrap: wrap;
 
     .timelineIcon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 30px;
-        height: 800px;
+        height: 100%;
     }
 }
 
@@ -55,12 +59,13 @@
     h4 {
         width: 284px;
         font-size: 46px;
+        margin-left: 69px;
     }
 }
 
 .milestoneContainer {
     display: flex;
-    width: 1030px;
+    width: 75%;
     gap: 17px;
     flex-wrap: wrap;
     flex-basis: auto;
@@ -119,7 +124,6 @@
     .timelineContainer {
         .timelineIcon {
             width: 13.7px;
-            height: 100%;
         }
     }
 
@@ -127,7 +131,7 @@
         margin-bottom: 31px;
 
         h4 {
-            width: 112px;
+            width: 119px;
             font-size: 26px;
         }
     }

@@ -4,16 +4,24 @@ export const Button = ({
   children,
   onClick,
   className,
-  autoFocus,
   refButton,
+  title,
+  textForScreenReaders,
 }: TButton) => {
   return (
     <button
       ref={refButton}
-      autoFocus={autoFocus}
       onClick={onClick}
       className={className}
+      title={title}
     >
+      <span
+        style={{
+          display: "none",
+        }}
+      >
+        {textForScreenReaders}
+      </span>
       {children}
     </button>
   );

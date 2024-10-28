@@ -46,7 +46,7 @@ export const Community = () => {
         />
       </div>
       {window.screen.width > 480 && (
-        <Button className={styles.contactButton} onClick={() => open('https://t.me/brokqwiks')}>
+        <Button title="Связаться с нами" textForScreenReaders="Связаться с нами" className={styles.contactButton} onClick={() => open('https://t.me/brokqwiks')}>
           {t("sectionButtonContact")}
           <img src={question_icon} alt="question_icon" />
         </Button>

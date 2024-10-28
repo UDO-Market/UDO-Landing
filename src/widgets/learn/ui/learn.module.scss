@@ -40,11 +40,12 @@
 
 .learnContentMobileAdaptiv {
     display: block;
+    width: 100%;
 }
 
 
 .learnBtnsAndFAQ {
-    margin-right: 110px;
+    margin-right: 7%;
     p {
         position: relative;
         bottom: 0;
@@ -157,6 +158,16 @@
         }
     }
 }
+@media screen and (max-width: 858px) {
+    .learnBtnsAndFAQ{
+        margin-right: 3%;
+    }
+    .learnInfo {
+        p {
+            width: 40%;
+        }
+    }
+}
 
 @media screen and (max-width: 769px) {
     .learnContainer {
@@ -227,7 +238,9 @@
             height: 50px;
         }
     }
-
+    .learnMainInfoAndImg{
+        width: 100%;
+    }
     .learnProtectText {
         margin-bottom: 35px;
     }
@@ -244,7 +257,7 @@
             line-height: 30px;
         }
     }
-    .learnImg {    
+    .learnImg {
         img {
             width: 282px;
             height: 294px;

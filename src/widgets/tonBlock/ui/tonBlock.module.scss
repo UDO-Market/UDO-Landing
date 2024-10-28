@@ -58,16 +58,20 @@
 
 .cardsBlock {
     margin-bottom: 42px;
-
-    img {
-        width: 431px;
-        height: 598px;
-        margin-right: 67px;
-
-        &:last-child {
-            margin-right: 0;
+    .cardsBlockForDesctopAdaptiv{
+        display: flex;
+        justify-content: center;
+        img {
+            width: 431px;
+            height: 598px;
+            margin-right: 4.7%;
+    
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
+   
 }
 
 
@@ -90,9 +94,26 @@
         color: #333;
     }
 }
+@media screen and (max-width: 1440px) {
+    .tonBlock {
+        width: 94%;
+        margin-left: 3%;
+    }
+    .headerBlock {
+        margin-bottom: 60px;
+    }
+    .cardsBlock {
+        .cardsBlockForDesctopAdaptiv{
+            img {
+                width: 30%;
+                height: 50%;
+            }
+        }
+       
+    }
+}
 @media screen and (max-width: 1025px) {
     .tonBlock {
-        width: 100%;
         margin-left: 90px;
         padding-right: 180px;
         margin-bottom: 84px;
@@ -147,7 +168,7 @@
     }
     .descriptionBlock {
         p {
-            width: 55%;
+            width: 60%;
             font-size: 16px;
             line-height: 20px;
             margin-bottom: 28px;

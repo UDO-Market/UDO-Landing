@@ -27,12 +27,12 @@ export const About = () => {
           </p>
         </div>
         <div className={window.screen.width > 769 ? styles.aboutButtons : styles.aboutButtonsMobileAdaptiv}>
-          <Button className={styles.buttoRocket}>{t('sectionAboutButtonFast')} <img src={rocket} alt="rocket" /></Button>
-          <Button>{t('sectionAboutButtonSafe')}</Button>
-          <Button onClick={() => open('https://t.me/brokqwiks')}>{t('sectionAboutButtonSupport')}</Button>
+          <Button title="" textForScreenReaders="" className={styles.buttoRocket}>{t('sectionAboutButtonFast')} <img src={rocket} alt="rocket" /></Button>
+          <Button title="" textForScreenReaders="">{t('sectionAboutButtonSafe')}</Button>
+          <Button title="Перейти к службе поддержки" textForScreenReaders="Перейти к службе поддержки" onClick={() => open('https://t.me/brokqwiks')}>{t('sectionAboutButtonSupport')}</Button>
         </div>
       </div>
-      {window.screen.width > 425 && (
+      {window.screen.width > 424 && (
         <div className={styles.gifBlock}>
         <img
           src={gif_array[Math.floor(Math.random() * gif_array.length)]}

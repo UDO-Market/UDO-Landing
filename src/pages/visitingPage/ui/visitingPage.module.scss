@@ -3,10 +3,17 @@
     width: 1428px;
     margin: 0 auto;    
 }
+@media screen and (max-width: 1440px) {
+    .visitingPageWhiteContainer{
+        width: 94%;
+        margin: 0;
+        margin-left: 3%;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .visitingPageWhiteContainer{
         width: 100%;
-        margin: 0;
         margin-left: 6%;
         padding-right: 12%;
     }
@@ -19,17 +26,27 @@
     }
 }
 
-
-
 .visitingPageBlackContainer{
     display: block;
     padding-top: 24px;
     background-color: #0e0f1d;
     .visitingPageBlack{
+        display: block;
         width: 1428px;
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .visitingPageBlackContainer{
+        .visitingPageBlack{
+            width: 94%;
+            margin: 0;
+            margin-left: 3%;
+        }
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .visitingPageBlackContainer{
         .visitingPageBlack{

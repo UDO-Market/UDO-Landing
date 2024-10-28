@@ -1,6 +1,6 @@
 import styles from "./tonBlock.module.scss";
 import "swiper/css";
-import 'swiper/scss/navigation';
+import "swiper/scss/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button/button";
@@ -12,7 +12,6 @@ import toncoin from "/icons/icon_ton.png";
 import { Navigation } from "swiper/modules";
 
 export const TonBlock = () => {
-  
   const { t } = useMyTranslate();
 
   return (
@@ -26,20 +25,11 @@ export const TonBlock = () => {
       </div>
       <div className={styles.cardsBlock}>
         {window.screen.width > 1025 ? (
-          <>
-            <img
-              src={telegram_wallet_img}
-              alt="telegram_wallet_img"
-            />
-            <img
-              src={tonkeeper_wallet_img}
-              alt="tonkeeper_wallet_img"
-            />
-            <img 
-              src={tonconnect_img} 
-              alt="tonconnect_img" 
-            />
-          </>
+          <div className={styles.cardsBlockForDesctopAdaptiv}>
+            <img src={telegram_wallet_img} alt="telegram_wallet_img" />
+            <img src={tonkeeper_wallet_img} alt="tonkeeper_wallet_img" />
+            <img src={tonconnect_img} alt="tonconnect_img" />
+          </div>
         ) : (
           <Swiper
             modules={[Navigation]}
@@ -48,22 +38,13 @@ export const TonBlock = () => {
             navigation
           >
             <SwiperSlide>
-              <img
-                src={telegram_wallet_img}
-                alt="telegram_wallet_img"
-              />
+              <img src={telegram_wallet_img} alt="telegram_wallet_img" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={tonkeeper_wallet_img}
-                alt="tonkeeper_wallet_img"
-              />
+              <img src={tonkeeper_wallet_img} alt="tonkeeper_wallet_img" />
             </SwiperSlide>
             <SwiperSlide>
-              <img 
-                src={tonconnect_img} 
-                alt="tonconnect_img" 
-              />
+              <img src={tonconnect_img} alt="tonconnect_img" />
             </SwiperSlide>
           </Swiper>
         )}
@@ -73,7 +54,11 @@ export const TonBlock = () => {
           <span>TON Connect</span> {t("sectionTonWalleDesc")}
         </p>
       </div>
-      <Button onClick={() => open('https://ton.tg/ru/wallets')}>
+      <Button
+        title="Установить кошелёк"
+        textForScreenReaders="Установить кошелёк"
+        onClick={() => open("https://ton.tg/ru/wallets")}
+      >
         {t("sectionTonWalletButton")}
         <img src={toncoin_icon3} alt="toncoin_icon3" />
       </Button>

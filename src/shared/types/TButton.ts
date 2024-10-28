@@ -4,6 +4,7 @@ export type TButton  = {
     children: ReactNode,
     onClick?: () => void,
     className?: string | undefined,
-    autoFocus?: boolean,
+    title: string,
+    textForScreenReaders: string,
     refButton?: Ref<HTMLButtonElement>
 }

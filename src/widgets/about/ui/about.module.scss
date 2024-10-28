@@ -20,7 +20,7 @@
     }
 
     p {
-        width: 720px;
+        width: 86%;
         font-size: 30px;
         margin-bottom: 40px;
         font-weight: 700;
@@ -43,7 +43,7 @@
     display: flex;
 
     button {
-        width: 200px;
+        width: 24%;
         height: 84px;
         display: flex;
         justify-content: center;
@@ -59,7 +59,7 @@
         cursor: pointer;
 
         &:first-child {
-            margin-right: 45px;
+            margin-right: 5.4%;
             background: #00A3FF;
             color: white;
 
@@ -71,7 +71,7 @@
         }
 
         &:last-child {
-            margin-left: 45px;
+            margin-left: 5.4%;
         }
 
         &:hover {
@@ -89,13 +89,38 @@
 
 .gifBlock {
     position: relative;
-    margin-left: 189px;
+    margin-left: 12%;
 
     img {
-        width: 400px;
-        height: 400px;
+        width: 380px;
+        height: 380px;
         justify-self: center;
         align-self: center;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .aboutHeader {
+        h2 {
+            font-size: 70px;
+            word-spacing: 7px;
+        }
+
+    }
+    .gifBlock{
+        margin-left: 2%;
+    
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .aboutButtons {    
+        button {
+            width: 200px;
+        }
     }
 }
 

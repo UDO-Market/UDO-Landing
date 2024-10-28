@@ -13,37 +13,64 @@ export const NavigationHeader = ({
   changeLanguages,
   i18n,
 }: TNavigationHeader) => {
-
   return (
     <>
       {window.screen.width > 1025 ? (
         <nav className={styles.navigation}>
           <ul>
             <li>
-              <Button onClick={() => scrollHeader(1844)}>
+              <Button
+                title="Перейти к блоку коммьюнити"
+                textForScreenReaders="Перейти к блоку коммьюнити"
+                onClick={() => scrollHeader(1844)}
+              >
                 {t("headerCommunity")}
               </Button>
             </li>
             <li>
-              <Button onClick={() => scrollHeader(4582)}>
+              <Button
+                title="Перейти к блоку изучить"
+                textForScreenReaders="Перейти к блоку изучить"
+                onClick={() => scrollHeader(4582)}
+              >
                 {t("headerLern")}
               </Button>
             </li>
             <li>
-              <Button onClick={() => scrollHeader(5850)}>
+              <Button
+                title="Перейти к блоку карта проекта"
+                textForScreenReaders="Перейти к блоку карта проекта"
+                onClick={() => scrollHeader(5850)}
+              >
                 {t("headerRoadMap")}
               </Button>
             </li>
             <li>
-              <Button onClick={() => open("https://t.me/brokqwiks")}>
+              <Button
+                title="Связаться с службой поддержки"
+                textForScreenReaders="Связаться с службой поддержки"
+                onClick={() => open("https://t.me/brokqwiks")}
+              >
                 {t("headerSupport")}
               </Button>
             </li>
             <li>
               {i18n.language == "ru" ? (
-                <Button onClick={() => changeLanguages("en")}>Eng</Button>
+                <Button
+                  title="Выбрать английский язык"
+                  textForScreenReaders="Выбрать английский язык"
+                  onClick={() => changeLanguages("en")}
+                >
+                  Eng
+                </Button>
               ) : (
-                <Button onClick={() => changeLanguages("ru")}>Ru</Button>
+                <Button
+                  title="Выбрать русский язык"
+                  textForScreenReaders="Выбрать русский язык"
+                  onClick={() => changeLanguages("ru")}
+                >
+                  Ru
+                </Button>
               )}
             </li>
           </ul>
@@ -54,6 +81,8 @@ export const NavigationHeader = ({
             <li>
               <div className={styles.buttonAdaptiveLang}>
                 <Button
+                  title="Переключатель языка"
+                  textForScreenReaders="Переключатель языка"
                   onClick={() =>
                     i18n.language == "ru"
                       ? changeLanguages("en")
@@ -66,11 +95,15 @@ export const NavigationHeader = ({
             </li>
 
             <li>
-              <Button onClick={() => setNavBar(!navBar)}>
+              <Button
+                title="Навигационная панель"
+                textForScreenReaders="Навигационная панель"
+                onClick={() => setNavBar(!navBar)}
+              >
                 {!navBar ? (
                   <img src={icons_bar} alt="icons_bar" />
                 ) : (
-                  <Cross setCross={setNavBar}/>
+                  <Cross setCross={setNavBar} />
                 )}
               </Button>
             </li>

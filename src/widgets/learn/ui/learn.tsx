@@ -30,6 +30,8 @@ export const Learn = () => {
           <div className={styles.learnBtnsAndFAQ}>
             <div className={styles.learnBtnsContainer}>
             <LearnButton
+                title="Перейти к блоку Смарт-контракты"
+                textForScreenReaders="Перейти к блоку Смарт-контракты"
                 onClick={() => handleDescriptionClick(1)}
                 imgSrc={contact}
                 text={buttonTexts.smartContract}
@@ -37,12 +39,16 @@ export const Learn = () => {
               />
 
               <LearnButton
+                title="Перейти к блоку Безопасный кошелёк"
+                textForScreenReaders="Перейти к блоку Безопасный кошелёк"
                 imgSrc={toncoin2}
                 onClick={() => handleDescriptionClick(2)}
                 text={buttonTexts.securityWallet}
               />
 
               <LearnButton
+                title="Перейти к блоку Децентрализация"
+                textForScreenReaders="Перейти к блоку Децентрализация"
                 imgSrc={block}
                 onClick={() => handleDescriptionClick(3)}
                 text={buttonTexts.defi}
