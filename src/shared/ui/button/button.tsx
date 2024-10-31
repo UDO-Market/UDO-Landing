@@ -16,9 +16,7 @@ export const Button = ({
       title={title}
     >
       <span
-        style={{
-          display: "none",
-        }}
+        style={{ display: 'none' }}
       >
         {textForScreenReaders}
       </span>

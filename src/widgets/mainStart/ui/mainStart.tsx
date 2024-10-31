@@ -4,13 +4,12 @@ import { useModal } from "../../../shared/ui/modal/useModal";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Modal } from "../../../shared/ui/modal/modal";
 import { Button } from "../../../shared/ui/button/button";
-import { handleTG } from "../../../features/handleTG/handleTG";
-import gif_6 from "/gif/duck6.gif";
-import icons_tg from "/icons/icon_tg.png";
 import { Cross } from "../../../shared/ui/cross/cross";
+import duck_6 from "/duck/duck6.webm";
+import icons_tg from "/svg/icon_telegram.svg";
 
 export const MainStart = () => {
-  const { displayedText } = useMyStart();
+  const { displayedText, handleSupportModal } = useMyStart();
   const { modal, setModal } = useModal();
   const { t } = useMyTranslate();
 
@@ -20,15 +19,9 @@ export const MainStart = () => {
         <div className={styles.logoUdoContainer}>
           <h1>{displayedText}</h1>
         </div>
-        <h1 className={styles.highlight}>Market-Place</h1>
-        <p>{t("mainDescription")}</p>
-        <Button
-          title=""
-          textForScreenReaders=""
-          onClick={() => {
-            setModal(!modal);
-          }}
-        >
+        <h2 className={styles.highlight}>Market-Place</h2>
+        <p>{t("mainDescription")} </p>
+        <Button title="" textForScreenReaders="" onClick={() => setModal(!modal)}>
           {t("mainDescriptionButton")}
         </Button>
       </div>
@@ -37,15 +30,12 @@ export const MainStart = () => {
         <span>
           <Cross setCross={setModal} />
         </span>
-        <img src={gif_6} alt="gifDucks6" className={styles.gif6Dugs} />
+        <video autoPlay muted loop src={duck_6} className={styles.gif6Dugs} />
         <p>{t("mainModalDescription")}</p>
         <Button
           title="Связаться с службой поддержки"
           textForScreenReaders="Связаться с службой поддержки"
-          onClick={() => {
-            handleTG();
-            setModal(false);
-          }}
+          onClick={handleSupportModal}
         >
           <img src={icons_tg} alt="telegram" /> Telegram
         </Button>

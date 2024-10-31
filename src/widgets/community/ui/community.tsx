@@ -2,10 +2,11 @@ import styles from "./community.module.scss";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button";
 import { CommunityCard } from "../../../shared/ui/communityCard/communityCard";
-import user_icon from "/icons/user_icon_community.png";
-import telegram_icon from "/icons/icon_tg.png";
-import github_icon from "/icons/icon_github.png";
-import twitter_icon from "/icons/icon_twitter.png";
+import { handleTG } from "../../../features/handleTG/handleTG";
+import user_icon from "/svg/icon_community.svg";
+import telegram_icon from "/svg/icon_telegram.svg";
+import github_icon from "/svg/icon_gitHub.svg";
+import twitter_icon from "/svg/icon_twitter.svg";
 import question_icon from "/svg/question.svg";
 
 export const Community = () => {
@@ -46,7 +47,7 @@ export const Community = () => {
         />
       </div>
       {window.screen.width > 480 && (
-        <Button title="Связаться с нами" textForScreenReaders="Связаться с нами" className={styles.contactButton} onClick={() => open('https://t.me/brokqwiks')}>
+        <Button title="Связаться с нами" textForScreenReaders="Связаться с нами" className={styles.contactButton} onClick={handleTG}>
           {t("sectionButtonContact")}
           <img src={question_icon} alt="question_icon" />
         </Button>

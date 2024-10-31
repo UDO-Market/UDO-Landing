@@ -1,32 +1,22 @@
 import styles from "./roadMap.module.scss";
+import { useRoadMap } from "../model/useRoadMap";
+import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { quarters } from "../model/quarters";
 import { QuarterSection } from "../model/quarterSection";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
-import roadMap_line from '/icons/roadMap_line.png'
-import roadMap_line_mobile from '/icons/roadMap_line_mobile.png'
-import roadMap_line_tablet from '/icons/roadMap_line_tablet.png'
-import clip_path from '/icons/clip_path.png'
+import icon_roadMap from '/svg/icon_roadMap.svg'
 
 
 export const RoadMap = () => {
   
   const {t} = useMyTranslate()
-
-  const sizeRodmap = () => {
-    if(window.window.screen.width < 485){
-      return roadMap_line_mobile
-    }else if(window.window.screen.width < 1025){
-      return roadMap_line_tablet
-    }else{
-      return roadMap_line
-    }
-  }
+  const { sizeRodmap } = useRoadMap()
+  
   return (
     <section className={styles.roadMapSection}>
       <div className={styles.titleContainer}>
         <h3>{t('sectionRoadMap')}</h3>
         <img
-            src={clip_path}
+            src={icon_roadMap}
             alt="Road Map"
         />
       </div>

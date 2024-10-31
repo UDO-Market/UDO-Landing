@@ -1,15 +1,10 @@
 import styles from "./tonBlock.module.scss";
-import "swiper/css";
-import "swiper/scss/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button/button";
-import telegram_wallet_img from "/icons/telegram_wallet_block.png";
-import tonkeeper_wallet_img from "/icons/tonkeeper_wallet_block.png";
-import tonconnect_img from "/icons/tonconnect_block.png";
 import toncoin_icon3 from "/svg/toncoin3.svg";
-import toncoin from "/icons/icon_ton.png";
-import { Navigation } from "swiper/modules";
+import { CardsBlock } from "../../../shared/ui/cardsBlock";
+import toncoin from "/svg/icon_toncoin.svg";
+
 
 export const TonBlock = () => {
   const { t } = useMyTranslate();
@@ -23,37 +18,15 @@ export const TonBlock = () => {
         </h2>
         <img src={toncoin} alt="toncoin" />
       </div>
-      <div className={styles.cardsBlock}>
-        {window.screen.width > 1025 ? (
-          <div className={styles.cardsBlockForDesctopAdaptiv}>
-            <img src={telegram_wallet_img} alt="telegram_wallet_img" />
-            <img src={tonkeeper_wallet_img} alt="tonkeeper_wallet_img" />
-            <img src={tonconnect_img} alt="tonconnect_img" />
-          </div>
-        ) : (
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-          >
-            <SwiperSlide>
-              <img src={telegram_wallet_img} alt="telegram_wallet_img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={tonkeeper_wallet_img} alt="tonkeeper_wallet_img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={tonconnect_img} alt="tonconnect_img" />
-            </SwiperSlide>
-          </Swiper>
-        )}
-      </div>
+
+      <CardsBlock/>
+
       <div className={styles.descriptionBlock}>
         <p>
           <span>TON Connect</span> {t("sectionTonWalleDesc")}
         </p>
       </div>
+
       <Button
         title="Установить кошелёк"
         textForScreenReaders="Установить кошелёк"

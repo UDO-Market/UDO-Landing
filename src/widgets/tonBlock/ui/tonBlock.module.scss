@@ -3,7 +3,6 @@
     margin: 0 auto;
     padding-top: 156px;
     margin-bottom: 204px;
-
     button {
         display: flex;
         justify-content: center;
@@ -27,7 +26,8 @@
         }
 
         img {
-            
+            width: 62px;
+            height: 62px;
             background: none;
             padding-left: 20px;
         }
@@ -56,24 +56,6 @@
     }
 }
 
-.cardsBlock {
-    margin-bottom: 42px;
-    .cardsBlockForDesctopAdaptiv{
-        display: flex;
-        justify-content: center;
-        img {
-            width: 431px;
-            height: 598px;
-            margin-right: 4.7%;
-    
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-   
-}
-
 
 .descriptionBlock {
     span {
@@ -94,7 +76,7 @@
         color: #333;
     }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1441px) {
     .tonBlock {
         width: 94%;
         margin-left: 3%;
@@ -102,19 +84,10 @@
     .headerBlock {
         margin-bottom: 60px;
     }
-    .cardsBlock {
-        .cardsBlockForDesctopAdaptiv{
-            img {
-                width: 30%;
-                height: 50%;
-            }
-        }
-       
-    }
 }
 @media screen and (max-width: 1025px) {
     .tonBlock {
-        margin-left: 90px;
+        margin-left: 6%;
         padding-right: 180px;
         margin-bottom: 84px;
         padding-top: 84px;
@@ -152,20 +125,6 @@
         }
     }
 
-    .cardsBlock {
-        width: 550px;
-        margin-bottom: 24px;
-        margin: 0 auto;
-        img {  
-            display: block;
-            margin: 0 auto;
-            width: 254px;
-            height: 352px;
-            &:last-child {
-                margin-right: auto;
-            }
-        }
-    }
     .descriptionBlock {
         p {
             width: 60%;
@@ -177,7 +136,7 @@
 
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
     .tonBlock {
         margin-left: 25px;
         padding-right: 50px;
@@ -208,11 +167,6 @@
             margin-right: 15px;
         }
     }
-
-    .cardsBlock {
-        width: 440px;
-    }
-
     .descriptionBlock {
         p {
             width: 85%;
@@ -245,15 +199,6 @@
             margin-right: 10px;
         }
     }
-
-    .cardsBlock {
-        width: 85%;
-        margin-bottom: 30px;
-        img {
-            width: 210px;
-            height: 290px;
-        }
-    }
     .descriptionBlock {
         p {
             width: 85%;
@@ -271,14 +216,6 @@
         img{
             width: 40px;
             height: 40px;
-        }
-    }
-    .cardsBlock {
-        width: 100%;
-        margin-bottom: 20px;
-        img {
-            width: 180px;
-            height: 260px;
         }
     }
     .descriptionBlock {

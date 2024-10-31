@@ -1,19 +1,25 @@
 import styles from "./learn.module.scss";
 import { useLearnLogic } from "../model/useLearnLogic";
-import { LearnButton } from "../../../shared/ui/learnButton/learnButton";
-import icon_learn from "/icons/icon_learn.png";
+import { LearnButton } from "../../../shared/ui/learnButton";
+import icon_learn from "/svg/icon_learn.svg";
 import block from "/svg/block.svg";
 import contact from "/svg/contract.svg";
 import toncoin2 from "/svg/toncoin2.svg";
 
 export const Learn = () => {
-  const { selectedDescription, handleDescriptionClick, buttonRef, buttonTexts, t, i18n} =
-    useLearnLogic();
+  const {
+    selectedDescription,
+    handleDescriptionClick,
+    buttonRef,
+    buttonTexts,
+    t,
+    i18n,
+  } = useLearnLogic();
 
   return (
     <section className={styles.learnContainer}>
       <div className={styles.learnHeading}>
-        <h4>{t("sectionLearnTitle")}</h4>
+        <h3>{t("sectionLearnTitle")}</h3> 
         <img src={icon_learn} alt="icon_learn" />
       </div>
 
@@ -29,11 +35,12 @@ export const Learn = () => {
         >
           <div className={styles.learnBtnsAndFAQ}>
             <div className={styles.learnBtnsContainer}>
-            <LearnButton
+              <LearnButton
                 title="Перейти к блоку Смарт-контракты"
                 textForScreenReaders="Перейти к блоку Смарт-контракты"
                 onClick={() => handleDescriptionClick(1)}
                 imgSrc={contact}
+                imgAlt="Картинка к блоку Смарт-контрактов"
                 text={buttonTexts.smartContract}
                 refButton={buttonRef}
               />
@@ -42,6 +49,7 @@ export const Learn = () => {
                 title="Перейти к блоку Безопасный кошелёк"
                 textForScreenReaders="Перейти к блоку Безопасный кошелёк"
                 imgSrc={toncoin2}
+                imgAlt="Картинка к блоку Безопасный кошелёк"
                 onClick={() => handleDescriptionClick(2)}
                 text={buttonTexts.securityWallet}
               />
@@ -50,6 +58,7 @@ export const Learn = () => {
                 title="Перейти к блоку Децентрализация"
                 textForScreenReaders="Перейти к блоку Децентрализация"
                 imgSrc={block}
+                imgAlt="Картинка к блоку Децентрализация"
                 onClick={() => handleDescriptionClick(3)}
                 text={buttonTexts.defi}
               />
@@ -78,7 +87,7 @@ export const Learn = () => {
                   : "607px",
             }}
           >
-            <h5>{selectedDescription.title}</h5>
+            <h4>{selectedDescription.title}</h4>
             <p>{selectedDescription.paragraf1}</p>
             <p>{selectedDescription.paragraf2}</p>
           </div>

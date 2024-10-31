@@ -4,6 +4,7 @@ import { TLearnButton } from "../../types/TLearnButton";
 export const LearnButton = ({
   onClick,
   imgSrc,
+  imgAlt,
   text,
   refButton,
   textForScreenReaders,
@@ -23,7 +24,7 @@ export const LearnButton = ({
       >
         {textForScreenReaders}
       </span>
-      <img src={imgSrc} alt={text} />
+      {window.screen.width > 351 && <img src={imgSrc} alt={imgAlt} />}
       {text}
     </button>
   );

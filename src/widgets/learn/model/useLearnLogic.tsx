@@ -3,37 +3,39 @@ import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 
 export const useLearnLogic = () => {
   const { t, i18n } = useMyTranslate();
-  
+
   const buttonRef = useRef<HTMLButtonElement>(null);
- 
-  const descriptionLearn = useMemo(() => [
-    {
-      id: 1,
-      title: t("sectionLearnInfoTitleSmartContract"),
-      paragraf1: t("sectionLearnInfoParagraf1SmartContract"),
-      paragraf2: t("sectionLearnInfoParagraf2SmartContract"),
-      imgDescription: getImageDescription(1),
-    },
-    {
-      id: 2,
-      title: t("sectionLearnInfoTitleSecurityWallet"),
-      paragraf1: t("sectionLearnInfoParagraf1SecurityWallet"),
-      paragraf2: t("sectionLearnInfoParagraf2SecurityWallet"),
-      imgDescription: getImageDescription(2),
-    },
-    {
-      id: 3,
-      title: t("sectionLearnInfoTitleDeFi"),
-      paragraf1: t("sectionLearnInfoParagraf1DeFi"),
-      paragraf2: t("sectionLearnInfoParagraf2DeFi"),
-      imgDescription: getImageDescription(3),
-    },
-  ], [t]);
+
+  const descriptionLearn = useMemo(
+    () => [
+      {
+        id: 1,
+        title: t("sectionLearnInfoTitleSmartContract"),
+        paragraf1: t("sectionLearnInfoParagraf1SmartContract"),
+        paragraf2: t("sectionLearnInfoParagraf2SmartContract"),
+        imgDescription: getImageDescription(1),
+      },
+      {
+        id: 2,
+        title: t("sectionLearnInfoTitleSecurityWallet"),
+        paragraf1: t("sectionLearnInfoParagraf1SecurityWallet"),
+        paragraf2: t("sectionLearnInfoParagraf2SecurityWallet"),
+        imgDescription: getImageDescription(2),
+      },
+      {
+        id: 3,
+        title: t("sectionLearnInfoTitleDeFi"),
+        paragraf1: t("sectionLearnInfoParagraf1DeFi"),
+        paragraf2: t("sectionLearnInfoParagraf2DeFi"),
+        imgDescription: getImageDescription(3),
+      },
+    ],
+    [t]
+  );
 
   const [selectedDescription, setSelectedDescription] = useState(
     descriptionLearn[0]
   );
-  
 
   useEffect(() => {
     if (buttonRef.current) {
@@ -42,11 +44,10 @@ export const useLearnLogic = () => {
     }
 
     setSelectedDescription(descriptionLearn[0]);
-
   }, [descriptionLearn]);
 
-
   const buttonTexts = useMemo(() => {
+    
     const isMobile = window.screen.width <= 768;
 
     return {
@@ -63,17 +64,17 @@ export const useLearnLogic = () => {
   }, [t]);
 
   function getImageDescription(id: number) {
-    const decentralisation = "/icons/decentralisation.png";
-    const decentralisationMobilka = "/icons/decentralisation_mobilka.png";
+    const decentralisation = "/icons/decentralisation.webp";
+    const decentralisationMobilka = "/icons/decentralisation_mobilka.webp";
 
     if (id === 1) {
       return window.screen.width > 769
         ? decentralisation
         : decentralisationMobilka;
     } else {
-      return `icons/${id === 2 ? "wallet_test" : "smart_contract"}.png`;
+      return `icons/${id === 2 ? "wallet_test" : "smart_contract"}.webp`;
     }
-  };
+  }
 
   const handleDescriptionClick = (id: number) => {
     const description = descriptionLearn.find((desc) => desc.id === id);
@@ -82,6 +83,13 @@ export const useLearnLogic = () => {
       setSelectedDescription(description);
     }
   };
-  
-  return { selectedDescription, handleDescriptionClick, buttonRef, buttonTexts, t, i18n };
+
+  return {
+    selectedDescription,
+    handleDescriptionClick,
+    buttonRef,
+    buttonTexts,
+    t,
+    i18n,
+  };
 };

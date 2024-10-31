@@ -4,12 +4,12 @@ import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Modal } from "../../../shared/ui/modal/modal";
 import { Button } from "../../../shared/ui/button";
 import { handleTG } from "../../../features/handleTG/handleTG";
-import gif_7 from "/gif/duck7.gif";
-import icon_users_partners from "/icons/icon_users_partners.png";
-import icon_tg from "/icons/icon_tg.png";
-import ton_nest_lvl2 from "/icons/ton_nest_lvl2.jpg";
-import add_new_partners from "/icons/add_new_partners.png";
-import move_partner from "/icons/move_partner.jpg";
+import duck_7 from "/duck/duck7.webm";
+import icon_partners from "/svg/icon_partners.svg";
+import icon_tg from "/svg/icon_telegram.svg";
+import ton_nest_lvl2 from "/icons/ton_nest_lvl2.webp";
+import add_new_partners from "/icons/add_new_partners.webp";
+import move_partner from "/icons/move_partner.webp";
 import { Cross } from "../../../shared/ui/cross/cross";
 
 export const Partners = () => {
@@ -20,7 +20,7 @@ export const Partners = () => {
     <section className={styles.partnersContainer}>
       <div className={styles.partnersHeading}>
         <h3>{t("sectionOurPartners")}</h3>
-        <img src={icon_users_partners} alt="icon_users_partners" />
+        <img src={icon_partners} alt="Наши партнёры" />
       </div>
 
       <div className={styles.allPartners}>
@@ -51,7 +51,7 @@ export const Partners = () => {
         <span>
           <Cross setCross={setModal} />
         </span>
-        <img src={gif_7} alt="gif_7_dugs" className={styles.gif7Dugs} />
+        <video autoPlay muted loop src={duck_7} className={styles.gif7Dugs} />
         <Button
           title="Связаться с службой поддержки"
           textForScreenReaders="Связаться с службой поддержки"

@@ -1,3 +1,4 @@
+
 .mainSection {
     display: flex;
     justify-content: center;
@@ -43,22 +44,21 @@
     display: inline-block;
     width: 162px;
     h1 {
+        width: fit-content;
         height: 153px;
         font-size: 90px;
-        font-weight: bold;
-        white-space: nowrap;
-        overflow: hidden;
-        width: fit-content;
         text-align: center;
         font-family: "Roboto Mono", monospace;
+        font-weight: 700;
+        overflow: hidden;
     }
 }
 
 .highlight {
-    display: block;
     margin-bottom: 28px;
     font-size: 90px;
-    font-weight: bold;
+    font-weight: 700;
+    color: aquamarine;
     background-image: linear-gradient(90deg, #0066FF, #01D1FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -187,7 +187,7 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
     .mainSection {
         padding-top: 146px;
         margin-bottom: 80px;

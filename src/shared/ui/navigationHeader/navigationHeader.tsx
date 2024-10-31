@@ -1,9 +1,9 @@
 import styles from "./navigation.module.scss";
-import { Button } from "../button";
+import { useHeaderLogic } from "../../../widgets/header/model/useHeaderLogic";
 import { TNavigationHeader } from "../../types/TNavigationHeader";
-import { Cross } from "../cross/cross";
-import icons_language from "/svg/icon_language.svg";
-import icons_bar from "/svg/icon_bars.svg";
+import { ButtonLang } from "../buttonLang";
+import { RendersButtonDesktop } from "../rendersButtonDesktop";
+import { RendersButtonMobile } from "../rendersButtonMobile";
 
 export const NavigationHeader = ({
   navBar,
@@ -13,103 +13,27 @@ export const NavigationHeader = ({
   changeLanguages,
   i18n,
 }: TNavigationHeader) => {
-  return (
-    <>
-      {window.screen.width > 1025 ? (
-        <nav className={styles.navigation}>
-          <ul>
-            <li>
-              <Button
-                title="Перейти к блоку коммьюнити"
-                textForScreenReaders="Перейти к блоку коммьюнити"
-                onClick={() => scrollHeader(1844)}
-              >
-                {t("headerCommunity")}
-              </Button>
-            </li>
-            <li>
-              <Button
-                title="Перейти к блоку изучить"
-                textForScreenReaders="Перейти к блоку изучить"
-                onClick={() => scrollHeader(4582)}
-              >
-                {t("headerLern")}
-              </Button>
-            </li>
-            <li>
-              <Button
-                title="Перейти к блоку карта проекта"
-                textForScreenReaders="Перейти к блоку карта проекта"
-                onClick={() => scrollHeader(5850)}
-              >
-                {t("headerRoadMap")}
-              </Button>
-            </li>
-            <li>
-              <Button
-                title="Связаться с службой поддержки"
-                textForScreenReaders="Связаться с службой поддержки"
-                onClick={() => open("https://t.me/brokqwiks")}
-              >
-                {t("headerSupport")}
-              </Button>
-            </li>
-            <li>
-              {i18n.language == "ru" ? (
-                <Button
-                  title="Выбрать английский язык"
-                  textForScreenReaders="Выбрать английский язык"
-                  onClick={() => changeLanguages("en")}
-                >
-                  Eng
-                </Button>
-              ) : (
-                <Button
-                  title="Выбрать русский язык"
-                  textForScreenReaders="Выбрать русский язык"
-                  onClick={() => changeLanguages("ru")}
-                >
-                  Ru
-                </Button>
-              )}
-            </li>
-          </ul>
-        </nav>
-      ) : (
-        <nav className={styles.navigationAdaptiv}>
-          <ul>
-            <li>
-              <div className={styles.buttonAdaptiveLang}>
-                <Button
-                  title="Переключатель языка"
-                  textForScreenReaders="Переключатель языка"
-                  onClick={() =>
-                    i18n.language == "ru"
-                      ? changeLanguages("en")
-                      : changeLanguages("ru")
-                  }
-                >
-                  <img src={icons_language} alt="icons_language" />
-                </Button>
-              </div>
-            </li>
+  
+  const { isDesktop } = useHeaderLogic();
 
-            <li>
-              <Button
-                title="Навигационная панель"
-                textForScreenReaders="Навигационная панель"
-                onClick={() => setNavBar(!navBar)}
-              >
-                {!navBar ? (
-                  <img src={icons_bar} alt="icons_bar" />
-                ) : (
-                  <Cross setCross={setNavBar} />
-                )}
-              </Button>
-            </li>
-          </ul>
-        </nav>
-      )}
-    </>
+  return (
+    <nav className={isDesktop ? styles.navigation : styles.navigationAdaptiv}>
+      <ul>
+        {isDesktop ? (
+          <RendersButtonDesktop t={t} scrollHeader={scrollHeader} />
+        ) : (
+          <RendersButtonMobile navBar={navBar} setNavBar={setNavBar} />
+        )}
+        <li>
+          {isDesktop && (
+            <ButtonLang
+              currentLang={i18n.language}
+              changeLanguages={changeLanguages}
+              isDesktop={isDesktop}
+            />
+          )}
+        </li>
+      </ul>
+    </nav>
   );
 };

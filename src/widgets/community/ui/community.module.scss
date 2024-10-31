@@ -46,8 +46,9 @@
         transform: scale(1.03);
     }
     img{
-        padding-left: 32px;
-
+        width: 73px;
+        height: 40px;
+        padding-left: 0px;
     }
 }
 @media screen and (max-width: 1025px) {
@@ -79,11 +80,11 @@
 
         img{
             padding-left: 10px;
-            width: 50px;
+            width: 40px;
         }
     }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
 
     .communitySection{
         margin-bottom: 94px;
@@ -111,8 +112,9 @@
         border-radius: 10px;
 
         img{
-            width: 55px;
-            padding-left: 18px;
+            width: 45px;
+            height: 45px;
+            padding-left: 8px;
         }
     }
     .communityCards{

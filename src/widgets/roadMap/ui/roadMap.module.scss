@@ -128,10 +128,11 @@
     }
 
     .quarterSection {
+
         margin-bottom: 31px;
 
         h4 {
-            width: 119px;
+            width: 120px;
             font-size: 26px;
         }
     }
@@ -159,7 +160,7 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
     .roadMapSection {
         padding-top: 108px;
         margin-bottom: 108px;
@@ -182,7 +183,7 @@
         margin-bottom: 26px;
 
         h4 {
-            width: 101px;
+            width: 122px;
             font-size: 22px;
         }
     }
@@ -209,7 +210,21 @@
         }
     }
 }
-
+@media screen and (max-width: 611px) {
+    .milestoneContainer {
+        width: 70.3%;
+    }
+    .quarterSection{
+        display: block;
+        margin-bottom: 37px;
+        margin-left: 28px;
+        h4{
+            width: 100%;
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .roadMapSection {
         padding-top: 80px;
@@ -243,11 +258,12 @@
     .quarterSection {
         display: block;
         margin-bottom: 37px;
-
+        margin-left: 28px;
         h4 {
             width: 130px;
             font-size: 26px;
             margin-bottom: 18px;
+            margin-left: 0;
         }
     }
 

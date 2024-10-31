@@ -1,6 +1,7 @@
 import { useEffect} from "react";
 import { TCross } from "../../types/TCross";
 import icons_cross from "/svg/icons_cross.svg";
+import styles from './cross.module.scss'
 
 export const Cross = ({setCross}: TCross) => {
     useEffect(() => {
@@ -15,5 +16,5 @@ export const Cross = ({setCross}: TCross) => {
           document.removeEventListener('keydown', handleKeyDown);
         };
       }, [setCross]);
-    return <img onClick={() => setCross(false)} src={icons_cross} alt="cross"/>
+    return <img onClick={() => setCross(false)} src={icons_cross} alt="cross" className={styles.cross}/>
 }

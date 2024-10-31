@@ -8,7 +8,7 @@
     margin-bottom: 24px;
     display: flex;
 
-    h4 {
+    h3 {
         font-size: 90px;
         margin-right: 33px;
     }
@@ -60,12 +60,13 @@
     }
 
     .learnBtnsContainer {
+        width: 100%;
         margin-bottom: 200px;
     }
 }
 
 .learnInfo {
-    h5 {
+    h4 {
         font-size: 30px;
         font-weight: 700;
         margin-bottom: 26px;
@@ -90,20 +91,65 @@
         height: 615px;
     }
 }
-@media screen and (max-width: 1025px) {
-    .learnContainer {
-        margin-bottom: 80px;
-        padding-top: 80px;
+
+@media screen and (max-width: 1440px) {
+    .learnContent {
+        padding-top: 50px;
+        height: 520px;
     }
     .learnMainInfoAndImg {
         width: 100%;
         margin: 0 auto;
     }
+    .learnBtnsAndFAQ{
+        width: 30%;
+        p {
+            padding-left: 8%;
+            font-size: 14.5px;
+        }
+        .learnBtnsContainer {
+            margin-bottom: 170px;
+        }
+    }
+    .learnImg {
+        img {
+            height: 90%;
+        }
+    }
+}
+@media screen and (max-width: 1280px) {
+    .learnBtnsAndFAQ {
+        width: 30%;
+        p{
+            font-size: 12px;
+        }
+    }
+     .learnInfo{
+        h4{
+            font-size: 30px;
+        }
+        p{
+            width: 260px;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+    }
+    .learnImg {
+        img {
+            height: 80%;
+        }
+    }
+}
+@media screen and (max-width: 1025px) {
+    .learnContainer {
+        margin-bottom: 80px;
+        padding-top: 80px;
+    }
     
     .learnHeading {
         margin-bottom: 10px;
 
-        h4 {
+        h3 {
             font-size: 42px;
             margin-right: 16px;
         }
@@ -138,7 +184,7 @@
         
     }
     .learnInfo {
-        h5 {
+        h4 {
             font-size: 20px;
             margin-bottom: 16px;
         }
@@ -160,7 +206,7 @@
 }
 @media screen and (max-width: 858px) {
     .learnBtnsAndFAQ{
-        margin-right: 3%;
+        margin-right: 5%;
     }
     .learnInfo {
         p {
@@ -169,13 +215,13 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
     .learnContainer {
         margin-bottom: 105px;
         padding-top: 105px;
     }
     .learnHeading {
-        h4 {
+        h3 {
             font-size: 48px;
             margin-right: 16px;
         }
@@ -191,6 +237,7 @@
     }
 
     .learnBtnsAndFAQ {
+        width: 100%;
         margin-right: 0;
         .learnBtnsContainer {
             display: flex;
@@ -202,7 +249,7 @@
     .learnInfo {
         padding-left: 30px;
         padding-right: 30px;
-        h5 {
+        h4 {
             font-size: 30px;
             margin-bottom: 16px;
         }
@@ -229,7 +276,7 @@
 
 @media screen and (max-width: 480px) {
     .learnHeading {
-        h4 {
+        h3 {
             font-size: 34px;
             margin-right: 10px;
         }
@@ -248,7 +295,7 @@
     .learnInfo {
         padding-left: 18px;
         padding-right: 18px;
-        h5 {
+        h4 {
             font-size: 26px;
         }
     
@@ -280,7 +327,7 @@
         }  
     }
     .learnInfo {
-        h5 {
+        h4 {
             font-size: 23px;
         }
     
