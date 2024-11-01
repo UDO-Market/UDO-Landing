@@ -2,18 +2,14 @@ import styles from "./about.module.scss";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button/button";
 import { handleTG } from "../../../features/handleTG/handleTG";
-import duck_1 from "/duck/duck1.webm";
-import duck_2 from "/duck/duck2.webm";
-import duck_3 from "/duck/duck3.webm";
-import duck_4 from "/duck/duck4.webm";
-import duck_5 from "/duck/duck5.webm";
 import rocket from "/svg/rocket.svg";
+import { useAbout } from "../model/useAbout";
 
 export const About = () => {
   const { t } = useMyTranslate();
 
-  const gif_array = [duck_1, duck_2, duck_3, duck_4, duck_5];
-
+  const {isWidth, gif_array} = useAbout()
+  
   return (
     <section className={styles.about}>
       <div className={styles.aboutContainer}>
@@ -26,7 +22,7 @@ export const About = () => {
         </div>
         <div
           className={
-            window.screen.width > 769
+            isWidth > 769
               ? styles.aboutButtons
               : styles.aboutButtonsMobileAdaptiv
           }
@@ -50,7 +46,7 @@ export const About = () => {
           </Button>
         </div>
       </div>
-      {window.screen.width > 424 && (
+      {isWidth > 424 && (
         <div className={styles.gifBlock}>
           <video autoPlay muted loop src={gif_array[Math.floor(Math.random() * gif_array.length)]}/>
         </div>

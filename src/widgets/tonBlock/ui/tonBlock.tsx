@@ -1,8 +1,8 @@
 import styles from "./tonBlock.module.scss";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 import { Button } from "../../../shared/ui/button/button";
-import toncoin_icon3 from "/svg/toncoin3.svg";
 import { CardsBlock } from "../../../shared/ui/cardsBlock";
+import toncoin_icon3 from "/svg/toncoin3.svg";
 import toncoin from "/svg/icon_toncoin.svg";
 
 

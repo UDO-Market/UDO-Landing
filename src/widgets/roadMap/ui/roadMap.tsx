@@ -9,6 +9,7 @@ import icon_roadMap from '/svg/icon_roadMap.svg'
 export const RoadMap = () => {
   
   const {t} = useMyTranslate()
+  
   const { sizeRodmap } = useRoadMap()
   
   return (

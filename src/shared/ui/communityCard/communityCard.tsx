@@ -1,7 +1,6 @@
-import { useState } from "react";
 import styles from "./communityCard.module.scss";
+import { useCommunityCard } from "../../lib/useCommunityCard";
 import { TCommunityCard } from "../../types/TCommunityCard";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
 
 export const CommunityCard = ({
   icon,
@@ -10,47 +9,30 @@ export const CommunityCard = ({
   url,
   aboutBtn,
 }: TCommunityCard) => {
-  const [hover, setHover] = useState(false);
-  const { i18n } = useMyTranslate();
-
-  const widthParagraf = () => {
-    if(window.screen.width < 480){
-      return i18n.language == 'en' ? '98%' : '97%'
-    }else if(window.screen.width < 769){
-      return i18n.language == 'en' ? '65%' : '65%' 
-    }else if(window.screen.width < 1025){
-      return i18n.language == 'en' ? '66%' : '72%'
-    }
-  }
   
+  const { hover, setHover, windowWidth, paragraphWidth } = useCommunityCard();
+
   return (
     <article
       className={styles.cardMain}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <img src={icon} alt="icon" />
+      <img src={icon} alt="name" />
 
       <h1>{name}</h1>
 
-      <p style={{ width: widthParagraf() }}>  
-        {descr}
-      </p>
+      <p style={{ width: paragraphWidth }}>{descr}</p>
 
       <a href={url} target="_blank" id="123" rel="noopener noreferrer">
         {aboutBtn}
         <span
           style={{
-            display: "inline-block",
-            transform:
-              window.screen.width > 1025
-                ? hover
-                  ? "translateX(20px)"
-                  : "translateX(0)"
-                : hover
-                ? "translateX(7px)"
-                : "translateX(0)",
-            transition: "transform 0.3s ease-in-out",
+            transform: hover
+              ? windowWidth > 1025
+                ? "translateX(20px)"
+                : "translateX(7px)"
+              : "translateX(0)",
           }}
         >
           {" >"}
@@ -59,4 +41,3 @@ export const CommunityCard = ({
     </article>
   );
 };
-

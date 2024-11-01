@@ -1,6 +1,8 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
-
+import block from "/svg/block.svg";
+import contact from "/svg/contract.svg";
+import toncoin2 from "/svg/toncoin2.svg";
 export const useLearnLogic = () => {
   const { t, i18n } = useMyTranslate();
 
@@ -47,7 +49,6 @@ export const useLearnLogic = () => {
   }, [descriptionLearn]);
 
   const buttonTexts = useMemo(() => {
-    
     const isMobile = window.screen.width <= 768;
 
     return {
@@ -76,13 +77,60 @@ export const useLearnLogic = () => {
     }
   }
 
-  const handleDescriptionClick = (id: number) => {
-    const description = descriptionLearn.find((desc) => desc.id === id);
+  const handleDescriptionClick = useCallback(
+    (id: number) => {
+      const description = descriptionLearn.find((desc) => desc.id === id);
 
-    if (description) {
-      setSelectedDescription(description);
-    }
-  };
+      if (description) {
+        setSelectedDescription(description);
+      }
+    },
+    [descriptionLearn]
+  );
+
+  const [isTablet, setIsTablet] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setIsTablet(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  const learnButtonData = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Перейти к блоку Смарт-контракты",
+        textForScreenReaders: "Перейти к блоку Смарт-контракты",
+        onClick: () => handleDescriptionClick(1),
+        imgSrc: contact,
+        imgAlt: "Картинка к блоку Смарт-контрактов",
+        text: buttonTexts.smartContract,
+        refButton: buttonRef,
+      },
+      {
+        id: 2,
+        title: "Перейти к блоку Безопасный кошелёк",
+        textForScreenReaders: "Перейти к блоку Безопасный кошелёк",
+        imgSrc: toncoin2,
+        imgAlt: "Картинка к блоку Безопасный кошелёк",
+        onClick: () => handleDescriptionClick(2),
+        text: buttonTexts.securityWallet,
+      },
+      {
+        id: 3,
+        title: "Перейти к блоку Децентрализация",
+        textForScreenReaders: "Перейти к блоку Децентрализация",
+        imgSrc: block,
+        imgAlt: "Картинка к блоку Децентрализация",
+        onClick: () => handleDescriptionClick(3),
+        text: buttonTexts.defi,
+      },
+    ],
+    [buttonTexts, handleDescriptionClick, buttonRef]
+  );
 
   return {
     selectedDescription,
@@ -91,5 +139,7 @@ export const useLearnLogic = () => {
     buttonTexts,
     t,
     i18n,
+    learnButtonData,
+    isTablet,
   };
 };

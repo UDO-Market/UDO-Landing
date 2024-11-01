@@ -2,24 +2,15 @@ import styles from "./learn.module.scss";
 import { useLearnLogic } from "../model/useLearnLogic";
 import { LearnButton } from "../../../shared/ui/learnButton";
 import icon_learn from "/svg/icon_learn.svg";
-import block from "/svg/block.svg";
-import contact from "/svg/contract.svg";
-import toncoin2 from "/svg/toncoin2.svg";
 
 export const Learn = () => {
-  const {
-    selectedDescription,
-    handleDescriptionClick,
-    buttonRef,
-    buttonTexts,
-    t,
-    i18n,
-  } = useLearnLogic();
+  const { selectedDescription, t, i18n, isTablet, learnButtonData } =
+    useLearnLogic();
 
   return (
     <section className={styles.learnContainer}>
       <div className={styles.learnHeading}>
-        <h3>{t("sectionLearnTitle")}</h3> 
+        <h3>{t("sectionLearnTitle")}</h3>
         <img src={icon_learn} alt="icon_learn" />
       </div>
 
@@ -28,43 +19,19 @@ export const Learn = () => {
       <aside className={styles.learnMainInfoAndImg}>
         <div
           className={
-            window.screen.width > 769
+            isTablet >= 769
               ? styles.learnContent
               : styles.learnContentMobileAdaptiv
           }
         >
           <div className={styles.learnBtnsAndFAQ}>
             <div className={styles.learnBtnsContainer}>
-              <LearnButton
-                title="Перейти к блоку Смарт-контракты"
-                textForScreenReaders="Перейти к блоку Смарт-контракты"
-                onClick={() => handleDescriptionClick(1)}
-                imgSrc={contact}
-                imgAlt="Картинка к блоку Смарт-контрактов"
-                text={buttonTexts.smartContract}
-                refButton={buttonRef}
-              />
-
-              <LearnButton
-                title="Перейти к блоку Безопасный кошелёк"
-                textForScreenReaders="Перейти к блоку Безопасный кошелёк"
-                imgSrc={toncoin2}
-                imgAlt="Картинка к блоку Безопасный кошелёк"
-                onClick={() => handleDescriptionClick(2)}
-                text={buttonTexts.securityWallet}
-              />
-
-              <LearnButton
-                title="Перейти к блоку Децентрализация"
-                textForScreenReaders="Перейти к блоку Децентрализация"
-                imgSrc={block}
-                imgAlt="Картинка к блоку Децентрализация"
-                onClick={() => handleDescriptionClick(3)}
-                text={buttonTexts.defi}
-              />
+              {learnButtonData.map((button) => (
+                <LearnButton key={button.id} {...button} />
+              ))}
             </div>
 
-            {window.screen.width > 769 && (
+            {isTablet > 769 && (
               <p>
                 {t("sectionLearnFAQ")} {""}
                 <a
@@ -82,9 +49,7 @@ export const Learn = () => {
             className={styles.learnInfo}
             style={{
               height:
-                i18n.language == "ru" || window.screen.width > 480
-                  ? "670px"
-                  : "607px",
+                i18n.language == "ru" || isTablet > 480 ? "670px" : "607px",
             }}
           >
             <h4>{selectedDescription.title}</h4>
@@ -94,7 +59,7 @@ export const Learn = () => {
         </div>
 
         <div className={styles.learnImg}>
-          <img src={selectedDescription.imgDescription} alt="img_description" />
+          <img src={selectedDescription.imgDescription} alt="Img description" />
         </div>
       </aside>
     </section>

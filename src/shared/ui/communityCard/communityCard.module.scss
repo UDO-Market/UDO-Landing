@@ -25,7 +25,6 @@
         align-self: center;
     }
     p {
-        width: 95%;
         margin-bottom: 52px;
         font-size: 25px;
         font-weight: 600;
@@ -45,6 +44,10 @@
         &:hover {
             color: #018EFF
         }
+        span{
+            display: inline-block;
+            transition: transform .3s ease-in-out;
+     }
     }
 }
 @media screen and (max-width: 1025px) {
