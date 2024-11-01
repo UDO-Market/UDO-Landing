@@ -5,6 +5,7 @@ export const Milestone = ({ iconSrc, text, color }: TMilestoneProps) => (
   <div className={styles.milestone} style={{backgroundColor: color}}>
     {iconSrc && <img src={iconSrc} alt="roadmap_cells_icons" className={styles.milestoneIcon}/>}
 
-    <h2>{text}</h2>
+    <div>{text}</div>
+
   </div>
 );

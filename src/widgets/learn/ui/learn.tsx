@@ -1,19 +1,16 @@
 import styles from "./learn.module.scss";
 import { useLearnLogic } from "../model/useLearnLogic";
-import { LearnButton } from "../../../shared/ui/learnButton/learnButton";
-import icon_learn from "/icons/icon_learn.png";
-import block from "/svg/block.svg";
-import contact from "/svg/contract.svg";
-import toncoin2 from "/svg/toncoin2.svg";
+import { LearnButton } from "../../../shared/ui/learnButton";
+import icon_learn from "/svg/icon_learn.svg";
 
 export const Learn = () => {
-  const { selectedDescription, handleDescriptionClick, buttonRef, buttonTexts, t, i18n} =
+  const { selectedDescription, t, i18n, isTablet, learnButtonData } =
     useLearnLogic();
 
   return (
     <section className={styles.learnContainer}>
       <div className={styles.learnHeading}>
-        <h2>{t("sectionLearnTitle")}</h2>
+        <h3>{t("sectionLearnTitle")}</h3>
         <img src={icon_learn} alt="icon_learn" />
       </div>
 
@@ -22,34 +19,19 @@ export const Learn = () => {
       <aside className={styles.learnMainInfoAndImg}>
         <div
           className={
-            window.screen.width > 480
+            isTablet >= 769
               ? styles.learnContent
               : styles.learnContentMobileAdaptiv
           }
         >
           <div className={styles.learnBtnsAndFAQ}>
             <div className={styles.learnBtnsContainer}>
-            <LearnButton
-                onClick={() => handleDescriptionClick(1)}
-                imgSrc={contact}
-                text={buttonTexts.smartContract}
-                refButton={buttonRef}
-              />
-
-              <LearnButton
-                imgSrc={toncoin2}
-                onClick={() => handleDescriptionClick(2)}
-                text={buttonTexts.securityWallet}
-              />
-
-              <LearnButton
-                imgSrc={block}
-                onClick={() => handleDescriptionClick(3)}
-                text={buttonTexts.defi}
-              />
+              {learnButtonData.map((button) => (
+                <LearnButton key={button.id} {...button} />
+              ))}
             </div>
 
-            {window.screen.width > 480 && (
+            {isTablet > 769 && (
               <p>
                 {t("sectionLearnFAQ")} {""}
                 <a
@@ -67,19 +49,17 @@ export const Learn = () => {
             className={styles.learnInfo}
             style={{
               height:
-                i18n.language == "ru" || window.screen.width > 480
-                  ? "670px"
-                  : "605px",
+                i18n.language == "ru" || isTablet > 480 ? "670px" : "607px",
             }}
           >
-            <h3>{selectedDescription.title}</h3>
+            <h4>{selectedDescription.title}</h4>
             <p>{selectedDescription.paragraf1}</p>
             <p>{selectedDescription.paragraf2}</p>
           </div>
         </div>
 
         <div className={styles.learnImg}>
-          <img src={selectedDescription.imgDescription} alt="img_description" />
+          <img src={selectedDescription.imgDescription} alt="Img description" />
         </div>
       </aside>
     </section>

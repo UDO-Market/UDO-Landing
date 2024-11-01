@@ -1,6 +1,9 @@
 import { TButton } from "./TButton";
 export type TLearnButton = {
-    onClick: () => void;
-    imgSrc: string;
-    text: string;
+    onClick: () => void,
+    imgSrc: string,
+    imgAlt: string,
+    title: string,
+    textForScreenReaders: string,
+    text: string,
   } & Pick<TButton, "refButton">
