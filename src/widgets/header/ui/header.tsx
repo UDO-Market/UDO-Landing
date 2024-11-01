@@ -6,7 +6,6 @@ import { NavigationHeader } from "../../../shared/ui/navigationHeader";
 import { NavigationBar } from "../../../shared/ui/navigationBar";
 import { Logo } from "../../../shared/ui/logo";
 export const Header = () => {
-
   const { t, i18n, changeLanguages } = useMyTranslate();
   const { navBar, setNavBar,  scrollHeader } = useHeaderLogic();
 
