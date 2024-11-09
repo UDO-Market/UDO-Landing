@@ -1,7 +1,6 @@
-import { useHeaderLogic } from "../../../widgets/header/model/useHeaderLogic";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
-import { Button } from "../button";
-import { ButtonLang } from "../buttonLang";
+import useMyTranslate from "../../../app/translationText/useMyTranslate";
+import { MButton } from "../button/button";
+import { ButtonLang } from "../buttonLang/buttonLang";
 import { Cross } from "../cross/cross";
 import { TNavigationHeader } from "../../types/TNavigationHeader";
 import icon_bars from "/svg/icon_bars.svg";
@@ -13,9 +12,8 @@ export const RendersButtonMobile = ({
   navBar,
   setNavBar,
 }: TRenderButtonMobile) => {
-
+  
   const { i18n, changeLanguages } = useMyTranslate();
-  const { isDesktop } = useHeaderLogic()
 
   return (
     <>
@@ -23,11 +21,10 @@ export const RendersButtonMobile = ({
         <ButtonLang
           currentLang={i18n.language}
           changeLanguages={changeLanguages}
-          isDesktop={isDesktop}
         />
       </li>
       <li>
-        <Button
+        <MButton
           title="Навигационная панель"
           textForScreenReaders="Навигационная панель"
           onClick={() => setNavBar(!navBar)}
@@ -37,7 +34,7 @@ export const RendersButtonMobile = ({
           ) : (
             <img src={icon_bars} alt="Иконка навигационной панели" />
           )}
-        </Button>
+        </MButton>
       </li>
     </>
   );

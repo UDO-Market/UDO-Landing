@@ -1,0 +1,25 @@
+{
+  "sectionLearnTitle": "Изучите",
+  "sectionLearnDescription": "Защитите свои деньги с помощью блокчейна",
+
+  "sectionLearnButtonSmartContract": "Смарт-контракты",
+  "sectionLearnButtonSmartContractMobileAdaptiv": "Контракты",
+  "sectionLearnButtonSecurityWallet": "Секретный кошелёк",
+  "sectionLearnButtonSecurityWalletMobileAdaptiv": "Кошелёк",
+  "sectionLearnButtonDefi": "Децентрализация",
+  "sectionLearnButtonDefiMobileAdaptiv": "Дефай",
+
+  "sectionLearnFAQ": "Больше информации в нашем",
+
+  "sectionLearnInfoTitleSmartContract": "Хранилище данных",
+  "sectionLearnInfoParagraf1SmartContract": "Мы используем технологию смарт-контрактов для хранения данных о товарах в зашифрованном виде и автономной передачи их в расшифрованном виде.",
+  "sectionLearnInfoParagraf2SmartContract": "Такой подход дает нам доступ к обновлению методов шифрования, и вам, пользователям, не нужно беспокоиться о своих данных, так как они доступны только вам.",
+
+  "sectionLearnInfoTitleSecurityWallet": "Безопасный кошелек",
+  "sectionLearnInfoParagraf1SecurityWallet": "Ваши средства находятся не в какой-то базе данных, а в отдельном кошельке, смарт-контракте в блокчейне.",
+  "sectionLearnInfoParagraf2SecurityWallet": "Это позволяет нам разрешать споры в транзакциях между покупателями и продавцами. Деньги отправляются на те же кошельки и замораживаются на пару дней, пока транзакция не будет подтверждена.",
+
+  "sectionLearnInfoTitleDeFi": "Полная децентрализация",
+  "sectionLearnInfoParagraf1DeFi": "Все товары, данные о транзакциях и данные пользователей находятся внутри блокчейна, а не на централизованном сервере, хосте.",
+  "sectionLearnInfoParagraf2DeFi": "Децентрализация такого уровня защищает нас от несанкционированного взлома мошенниками, а также позволяет быстро анализировать открытые данные."
+}

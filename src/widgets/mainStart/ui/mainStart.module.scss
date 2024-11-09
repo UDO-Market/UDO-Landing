@@ -1,9 +1,9 @@
-
 .mainSection {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 220px;
+    overflow: hidden;
+    margin-bottom: 210px;
 }
 
 .mainContent {
@@ -22,6 +22,7 @@
         width: 45%;
         height: 70px;
         margin: 0 auto;
+        margin-bottom: 10px;
         background-color: black;
         color: white;
         border: none;
@@ -156,7 +157,7 @@
     }
 
     .modalContent {
-        width: 95%;
+        width: 55%;
         height: 350px;
         border-radius: 10px;
     
@@ -219,6 +220,9 @@
             font-size: 25px;
         }
     }
+    .modalContent {
+        width: 70%;
+    }
 }
 
 
@@ -276,13 +280,13 @@
         padding-top: 120px;
     }
     .highlight {
-        font-size: 45px;
+        font-size: 40px;
     }
     .logoUdoContainer {
-        width: 139px;
+        width: 114px;
         h1 {
             height: 70px;
-            font-size: 58px;
+            font-size: 52px;
         }
     }
     .mainContent {

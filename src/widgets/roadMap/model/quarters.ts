@@ -1,100 +1,42 @@
-import { TQuarters } from "./types";
+import { TQuarters } from "./typesRoadMap";
+
+const createMilestone = (iconSrc: string, text: string, color: string = '') => ({
+  iconSrc,
+  text,
+  color,
+});
 
 export const quarters: TQuarters[] = [
   {
     id: 0,
     quarter: "2024 Q4",
     milestones: [
-      {
-        iconSrc: "/svg/presention_icon_white.svg",
-        text: "Landing",
-        color: '#018eff'
-      },
-      {
-        iconSrc:
-          "/svg/cloasing_tag_roadMap.svg",
-        text: "MVP",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/toncoin_roadMap.svg",
-        text: "Ton Nest",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/human_roadMap.svg",
-        text: "Comminity",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/toncoin_roadMap.svg",
-        text: "Investors",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/gifts_roadMap.svg",
-        text: "Gifts",
-        color: ''
-      },
+      createMilestone("/svg/presention_icon_white.svg", "Landing", '#018eff'),
+      createMilestone("/svg/cloasing_tag_roadMap.svg", "MVP"),
+      createMilestone("/svg/toncoin_roadMap.svg", "Ton Nest"),
+      createMilestone("/svg/human_roadMap.svg", "Community"),
+      createMilestone("/svg/toncoin_roadMap.svg", "Investors"),
+      createMilestone("/svg/gifts_roadMap.svg", "Gifts"),
     ],
   },
   {
     id: 1,
     quarter: "2025 Q1",
     milestones: [
-      {
-        iconSrc:
-          "svg/closing_brackets_roadMap.svg",
-        text: "Alpha-Test",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/paper_roadMap.svg",
-        text: "Ton Apps",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/human_roadMap.svg",
-        text: "Closed Beta-Test",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/human_roadMap.svg",
-        text: "Opened Beta-Test",
-        color: ''
-      },
+      createMilestone("/svg/closing_brackets_roadMap.svg", "Alpha-Test"),
+      createMilestone("/svg/paper_roadMap.svg", "Ton Apps"),
+      createMilestone("/svg/human_roadMap.svg", "Closed Beta-Test"),
+      createMilestone("/svg/human_roadMap.svg", "Opened Beta-Test"),
     ],
   },
   {
     id: 2,
     quarter: "2025 Q2",
     milestones: [
-      {
-        iconSrc:
-          "/svg/logo_roadMap.svg",
-        text: "Release",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/notcoin_roadMap.svg",
-        text: "TON Jettons",
-        color: ''
-      },
-      {
-        iconSrc:
-          "/svg/paper_roadMap.svg",
-        text: "More Categories",
-        color: ''
-      },
-      { text: "Soon...", color: '' },
+      createMilestone("/svg/logo_roadMap.svg", "Release"),
+      createMilestone("/svg/notcoin_roadMap.svg", "TON Jettons"),
+      createMilestone("/svg/paper_roadMap.svg", "More Categories"),
+      createMilestone("", "Soon..."),
     ],
   },
 ];

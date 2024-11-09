@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { useModal } from "../../../shared/ui/modal/useModal";
+import useModal from "../../../shared/ui/modal/useModal";
 import { handleTG } from "../../../features/handleTG/handleTG";
-export const useMyStart = () => {
+
+const useMyStart = () => {
   const [displayedText, setDisplayedText] = useState("");
   const {setModal} = useModal()
   const [isBlinked, setIsBlinked] = useState(true);
@@ -39,3 +40,5 @@ export const useMyStart = () => {
   }
   return { displayedText: blinkedText, handleSupportModal  };
 };
+
+export default useMyStart

@@ -1,6 +1,6 @@
-import { useHeaderLogic } from "../../../widgets/header/model/useHeaderLogic";
+import useHeaderLogic from "../../../widgets/header/model/useHeaderLogic";
 import { TNavigationBarItem } from "../../types/TNavigationBarItem";
-import { Button } from "../button";
+import { MButton } from "../button/button";
 
 export const NavigationBarItem = ({scrollHeader, t}: TNavigationBarItem) => {
     const {buttonParamScroll} = useHeaderLogic()
@@ -8,13 +8,13 @@ export const NavigationBarItem = ({scrollHeader, t}: TNavigationBarItem) => {
       <>
         {buttonParamScroll.map(({id, scrollingTo, titleKey, onClick}) => (
           <li key={id}>
-            <Button 
+            <MButton 
               title={`Перейти к блоку ${t(titleKey)}`}
               textForScreenReaders={`Перейти к блоку ${t(titleKey)}`}
               onClick={() => onClick ? onClick() : scrollHeader(scrollingTo)}
             >
               {t(titleKey)} {">"}
-            </Button>
+            </MButton>
           </li>
         ))}
       </>

@@ -1,5 +1,5 @@
 import styles from "./navigation.module.scss";
-import { useHeaderLogic } from "../../../widgets/header/model/useHeaderLogic";
+import useHeaderLogic from "../../../widgets/header/model/useHeaderLogic";
 import { TNavigationHeader } from "../../types/TNavigationHeader";
 import { ButtonLang } from "../buttonLang";
 import { RendersButtonDesktop } from "../rendersButtonDesktop";
@@ -29,7 +29,6 @@ export const NavigationHeader = ({
             <ButtonLang
               currentLang={i18n.language}
               changeLanguages={changeLanguages}
-              isDesktop={isDesktop}
             />
           )}
         </li>

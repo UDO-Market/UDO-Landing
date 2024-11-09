@@ -1,0 +1,27 @@
+.buttonLang{
+    display: flex;
+    width: 69px;
+    img{
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .buttonLang{
+        font-size: 23px;
+        width: 80px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 770px) {
+    .buttonLang{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 481px) {
+    .buttonLang{
+        width: 68px;
+        font-size: 19px;
+    }
+}

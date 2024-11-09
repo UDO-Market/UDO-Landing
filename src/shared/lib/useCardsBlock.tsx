@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-export const useCardsBlock = () => {
+const useCardsBlock = () => {
   const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1025);
 
   useEffect(() => {
@@ -30,3 +30,5 @@ export const useCardsBlock = () => {
   ], [])
   return { isLaptop, images };
 };
+
+export default useCardsBlock

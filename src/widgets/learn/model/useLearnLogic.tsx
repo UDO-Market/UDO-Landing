@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
+import useMyTranslate  from "../../../app/translationText/useMyTranslate";
 import block from "/svg/block.svg";
 import contact from "/svg/contract.svg";
 import toncoin2 from "/svg/toncoin2.svg";
-export const useLearnLogic = () => {
+const useLearnLogic = () => {
   const { t, i18n } = useMyTranslate();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -88,10 +88,10 @@ export const useLearnLogic = () => {
     [descriptionLearn]
   );
 
-  const [isTablet, setIsTablet] = useState(window.innerWidth);
+  const [isWidth, setIsIsWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setIsTablet(window.innerWidth);
+    const handleResize = () => setIsIsWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
 
@@ -132,6 +132,8 @@ export const useLearnLogic = () => {
     [buttonTexts, handleDescriptionClick, buttonRef]
   );
 
+  const learnInfoHeight = i18n.language == "ru" || isWidth > 480 ? "670px" : "607px"
+  
   return {
     selectedDescription,
     handleDescriptionClick,
@@ -140,6 +142,9 @@ export const useLearnLogic = () => {
     t,
     i18n,
     learnButtonData,
-    isTablet,
+    isWidth,
+    learnInfoHeight
   };
 };
+
+export default useLearnLogic

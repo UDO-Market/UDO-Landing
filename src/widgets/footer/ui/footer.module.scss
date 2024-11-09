@@ -1,33 +1,39 @@
 .footer {
     padding-bottom: 81px;
-    border-top: 3px solid white;
+    overflow: hidden;
+    .footerContainer {
+        border-top: 3px solid white;
 
-    .footerContant {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 56px;
+        .footerContant {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 56px;
 
-        h2 {
-            font-size: 25px;
-            color: #F3F4FF;
-        }
+            h2 {
+                font-size: 25px;
+                color: #F3F4FF;
+            }
 
-        .twitterIcon {
-            margin-right: 0;
+            .twitterIcon {
+                margin-right: 0;
+            }
         }
     }
+
 }
 
 @media screen and (max-width: 1025px) {
     .footer {
         padding-bottom: 39px;
 
-        .footerContant {
-            margin-top: 25px;
+        .footerContainer {
+            .footerContant {
+                margin-top: 25px;
 
-            h2 {
-                font-size: 16px;
+                h2 {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -35,11 +41,13 @@
 
 @media screen and (max-width: 770px) {
     .footer {
-        .footerContant {
-            margin-top: 34px;
+        .footerContainer {
+            .footerContant {
+                margin-top: 34px;
 
-            h2 {
-                font-size: 15px;
+                h2 {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -47,13 +55,15 @@
 
 @media screen and (max-width: 480px) {
     .footer {
-        padding-bottom: 24px;
+        padding-bottom: 31px;
 
-        .footerContant {
-            margin-top: 12px;
+        .footerContainer {
+            .footerContant {
+                margin-top: 12px;
 
-            h2 {
-                font-size: 13px;
+                h2 {
+                    font-size: 13px;
+                }
             }
         }
     }
@@ -61,10 +71,11 @@
 
 @media screen and (max-width: 321px) {
     .footer {
-        .footerContant {
-
-            h2 {
-                font-size: 12px;
+        .footerContainer {
+            .footerContant {
+                h2 {
+                    font-size: 12px;
+                }
             }
         }
     }

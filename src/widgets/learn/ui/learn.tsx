@@ -1,25 +1,53 @@
 import styles from "./learn.module.scss";
-import { useLearnLogic } from "../model/useLearnLogic";
+import useLearnLogic from "../model/useLearnLogic";
+import useMyAnimated from "../../../app/animated/useMyAnimated";
+import { motion } from "framer-motion";
 import { LearnButton } from "../../../shared/ui/learnButton";
 import icon_learn from "/svg/icon_learn.svg";
 
 export const Learn = () => {
-  const { selectedDescription, t, i18n, isTablet, learnButtonData } =
-    useLearnLogic();
+  const {
+    selectedDescription,
+    t,
+    isWidth,
+    learnButtonData,
+    learnInfoHeight,
+  } = useLearnLogic();
+
+  const { animateAppearance } = useMyAnimated();
 
   return (
-    <section className={styles.learnContainer}>
-      <div className={styles.learnHeading}>
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2 }}
+      className={styles.learnContainer}
+    >
+      <motion.div
+        custom={1}
+        variants={animateAppearance}
+        className={styles.learnHeading}
+      >
         <h3>{t("sectionLearnTitle")}</h3>
         <img src={icon_learn} alt="icon_learn" />
-      </div>
+      </motion.div>
 
-      <p className={styles.learnProtectText}>{t("sectionLearnDescription")}</p>
+      <motion.p
+        custom={2}
+        variants={animateAppearance}
+        className={styles.learnProtectText}
+      >
+        {t("sectionLearnDescription")}
+      </motion.p>
 
-      <aside className={styles.learnMainInfoAndImg}>
+      <motion.aside
+        custom={3}
+        variants={animateAppearance}
+        className={styles.learnMainInfoAndImg}
+      >
         <div
           className={
-            isTablet >= 769
+            isWidth >= 769
               ? styles.learnContent
               : styles.learnContentMobileAdaptiv
           }
@@ -31,7 +59,7 @@ export const Learn = () => {
               ))}
             </div>
 
-            {isTablet > 769 && (
+            {isWidth > 769 && (
               <p>
                 {t("sectionLearnFAQ")} {""}
                 <a
@@ -47,10 +75,7 @@ export const Learn = () => {
 
           <div
             className={styles.learnInfo}
-            style={{
-              height:
-                i18n.language == "ru" || isTablet > 480 ? "670px" : "607px",
-            }}
+            style={{ height: learnInfoHeight }}
           >
             <h4>{selectedDescription.title}</h4>
             <p>{selectedDescription.paragraf1}</p>
@@ -61,7 +86,7 @@ export const Learn = () => {
         <div className={styles.learnImg}>
           <img src={selectedDescription.imgDescription} alt="Img description" />
         </div>
-      </aside>
-    </section>
+      </motion.aside>
+    </motion.section>
   );
 };

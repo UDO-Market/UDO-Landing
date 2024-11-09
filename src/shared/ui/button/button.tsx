@@ -1,26 +1,26 @@
+import { motion } from "framer-motion";
 import { TButton } from "../../types/TButton";
+import { forwardRef, LegacyRef } from "react";
 
-export const Button = ({
-  children,
-  onClick,
-  className,
-  refButton,
-  title,
-  textForScreenReaders,
-}: TButton) => {
-  return (
-    <button
-      ref={refButton}
-      onClick={onClick}
-      className={className}
-      title={title}
-    >
-      <span
-        style={{ display: 'none' }}
+const Button = forwardRef(
+  ({
+    children,
+    onClick,
+    className,
+    title,
+    textForScreenReaders,
+  }: TButton, refButton: LegacyRef<HTMLButtonElement>) => {
+    return (
+      <button
+        ref={refButton}
+        onClick={onClick}
+        className={className}
+        title={title}
       >
-        {textForScreenReaders}
-      </span>
-      {children}
-    </button>
-  );
-};
+        <span style={{ display: "none" }}>{textForScreenReaders}</span>
+        {children}
+      </button>
+    );
+  }
+);
+export const MButton = motion.create(Button)

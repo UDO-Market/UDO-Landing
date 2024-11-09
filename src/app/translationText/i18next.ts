@@ -2,11 +2,13 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { resources } from "./resources";
 
-export default i18n.use(initReactI18next).init({
+const userLanguage = navigator.language
+const lng = userLanguage.startsWith('ru') ? 'ru' : 'en'
+
+i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: lng,
   interpolation: {
     escapeValue: false,
   },
 });
-
