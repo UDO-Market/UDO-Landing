@@ -6,10 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.sw?
 
-# node_modules
-dist
-dist-ssr
+node_modules
+# dist
+# dist-ssr
 *.local
 *.svg text eol=lf
 *.sw?
