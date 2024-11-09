@@ -13,7 +13,7 @@ export const Header = () => {
   const { t, i18n, changeLanguages } = useMyTranslate();
   const { isDesktop, navBar, setNavBar, scrollHeader } = useHeaderLogic();
 
-  const {animateYMinus50, animateAppearance} = useMyAnimated()
+  const { animateYMinus50 } = useMyAnimated()
 
   return (
     <header className={styles.header}>
@@ -37,8 +37,8 @@ export const Header = () => {
       </motion.div>
 
       <MNavigationBar
-        initial={animateAppearance.hidden}
-        whileInView={animateAppearance.visible(0)}
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
         isOpen={navBar}
         className={styles.navigationBar}
       >

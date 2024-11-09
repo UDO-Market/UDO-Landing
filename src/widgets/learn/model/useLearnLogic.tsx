@@ -88,10 +88,10 @@ const useLearnLogic = () => {
     [descriptionLearn]
   );
 
-  const [isWidth, setIsIsWidth] = useState(window.innerWidth);
+  const [isWidth, setIsIsWidth] = useState(window.innerWidth > 770);
 
   useEffect(() => {
-    const handleResize = () => setIsIsWidth(window.innerWidth);
+    const handleResize = () => setIsIsWidth(window.innerWidth > 770);
 
     window.addEventListener("resize", handleResize);
 
@@ -132,7 +132,7 @@ const useLearnLogic = () => {
     [buttonTexts, handleDescriptionClick, buttonRef]
   );
 
-  const learnInfoHeight = i18n.language == "ru" || isWidth > 480 ? "670px" : "607px"
+  const learnInfoHeight = i18n.language == "ru" || window.screen.width > 480 ? "670px" : "607px"
   
   return {
     selectedDescription,

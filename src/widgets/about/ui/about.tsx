@@ -47,14 +47,12 @@ export const About = () => {
           whileInView="visible"
           viewport={{ amount: 0.2 }}
           className={
-            isWidth > 769
-              ? styles.aboutButtons
-              : styles.aboutButtonsMobileAdaptiv
+            isWidth ? styles.aboutButtons : styles.aboutButtonsMobileAdaptiv
           }
         >
           <MButton
             custom={1}
-            variants={isWidth > 770 ? animateY50 : animateYMinus50}
+            variants={isWidth ? animateY50 : animateYMinus50}
             title=""
             textForScreenReaders=""
             className={styles.buttoRocket}
@@ -63,7 +61,7 @@ export const About = () => {
           </MButton>
           <MButton
             custom={3}
-            variants={isWidth > 770 ? animateY50 : animateAppearance}
+            variants={isWidth ? animateY50 : animateAppearance}
             title=""
             textForScreenReaders=""
           >
@@ -71,7 +69,7 @@ export const About = () => {
           </MButton>
           <MButton
             custom={4}
-            variants={isWidth > 770 ? animateY50 : animateAppearance}
+            variants={isWidth ? animateY50 : animateAppearance}
             title="Перейти к службе поддержки"
             textForScreenReaders="Перейти к службе поддержки"
             onClick={handleTG}
@@ -93,6 +91,7 @@ export const About = () => {
           autoPlay
           muted
           loop
+          playsInline
           src={gif_array[Math.floor(Math.random() * gif_array.length)]}
         />
       </motion.div>

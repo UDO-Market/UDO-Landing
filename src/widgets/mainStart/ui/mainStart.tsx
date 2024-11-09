@@ -53,7 +53,14 @@ export const MainStart = () => {
         <span>
           <Cross setCross={setModal} />
         </span>
-        <video autoPlay muted loop src={duck_6} className={styles.gif6Dugs} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src={duck_6}
+          className={styles.gif6Dugs}
+        />
         <p>{t("mainModalDescription")}</p>
         <MButton
           title="Связаться с службой поддержки"

@@ -6,13 +6,8 @@ import { LearnButton } from "../../../shared/ui/learnButton";
 import icon_learn from "/svg/icon_learn.svg";
 
 export const Learn = () => {
-  const {
-    selectedDescription,
-    t,
-    isWidth,
-    learnButtonData,
-    learnInfoHeight,
-  } = useLearnLogic();
+  const { selectedDescription, t, isWidth, learnButtonData, learnInfoHeight } =
+    useLearnLogic();
 
   const { animateAppearance } = useMyAnimated();
 
@@ -47,9 +42,7 @@ export const Learn = () => {
       >
         <div
           className={
-            isWidth >= 769
-              ? styles.learnContent
-              : styles.learnContentMobileAdaptiv
+            isWidth ? styles.learnContent : styles.learnContentMobileAdaptiv
           }
         >
           <div className={styles.learnBtnsAndFAQ}>
@@ -59,7 +52,7 @@ export const Learn = () => {
               ))}
             </div>
 
-            {isWidth > 769 && (
+            {isWidth && (
               <p>
                 {t("sectionLearnFAQ")} {""}
                 <a
@@ -73,10 +66,7 @@ export const Learn = () => {
             )}
           </div>
 
-          <div
-            className={styles.learnInfo}
-            style={{ height: learnInfoHeight }}
-          >
+          <div className={styles.learnInfo} style={{ height: learnInfoHeight }}>
             <h4>{selectedDescription.title}</h4>
             <p>{selectedDescription.paragraf1}</p>
             <p>{selectedDescription.paragraf2}</p>

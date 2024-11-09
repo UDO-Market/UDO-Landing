@@ -69,7 +69,14 @@ export const Partners = () => {
         <span>
           <Cross setCross={setModal} />
         </span>
-        <video autoPlay muted loop src={duck_7} className={styles.gif7Dugs} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src={duck_7}
+          className={styles.gif7Dugs}
+        />
         <MButton
           title="Связаться с службой поддержки"
           textForScreenReaders="Связаться с службой поддержки"

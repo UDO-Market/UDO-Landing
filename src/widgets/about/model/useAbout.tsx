@@ -6,12 +6,12 @@ import duck_4 from "/duck/duck4.webm";
 import duck_5 from "/duck/duck5.webm";
 
 const useAbout = () => {
-  const [isWidth, setIsWidth] = useState(window.innerWidth);
+  const [isWidth, setIsWidth] = useState(window.innerWidth > 770);
 
   const gif_array = [duck_1, duck_2, duck_3, duck_4, duck_5];
 
   useEffect(() => {
-    const handleResize = () => setIsWidth(window.innerWidth);
+    const handleResize = () => setIsWidth(window.innerWidth > 770);
 
     window.addEventListener("resize", handleResize);
 
@@ -20,4 +20,4 @@ const useAbout = () => {
 
   return { isWidth, gif_array };
 };
-export default useAbout
+export default useAbout;

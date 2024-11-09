@@ -40,17 +40,18 @@
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1026px) {
     .navigationAdaptiv {
         width: 100%;
         display: flex;
-        justify-content: right;
-
+        height: 32px;
         ul {
             display: flex;
             list-style: none;
-
+            
             li {
+                position: absolute;
+                right: 0px;
                 button {
                     background: transparent;
                     cursor: pointer;
@@ -64,15 +65,23 @@
 
             .buttonAdaptiveLang {
                 display: flex;
-                margin-right: 26px;
+                margin-right: 46px;
             }
         }
     }
-
+}
+@media screen and (max-width: 770px) {
+    .navigationAdaptiv {
+        height: 46px;
+        li{
+            margin-top: 5px;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
     .navigationAdaptiv {
+        height: 33px;
         ul {
             li {
                 img {
@@ -82,7 +91,7 @@
             }
 
             .buttonAdaptiveLang {
-                margin-right: 14px;
+                margin-right: 32px;
             }
         }
     }
