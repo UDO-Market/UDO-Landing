@@ -8,6 +8,8 @@ import {
 import { footerCircleData } from "../model/footerCircleData";
 
 export const Footer = () => {
+  const isMobile = window.screen.width > 480;
+
   const { animateY50 } = useMyAnimated();
 
   return (
@@ -19,7 +21,7 @@ export const Footer = () => {
           viewport={{ amount: 0.2 }}
           className={styles.footerContant}
         >
-          <h2>{window.screen.width > 480 ? "UDO Team" : "UDO"}</h2>
+          <h2>{isMobile ? "UDO Team" : "UDO"}</h2>
           <div>
             {footerCircleData.map((footerItem) => (
               <FooterLinkCircle key={footerItem.id} {...footerItem} />

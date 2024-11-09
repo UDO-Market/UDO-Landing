@@ -54,7 +54,7 @@ export const About = () => {
         >
           <MButton
             custom={1}
-            variants={window.screen.width > 770 ? animateY50 : animateYMinus50}
+            variants={isWidth > 770 ? animateY50 : animateYMinus50}
             title=""
             textForScreenReaders=""
             className={styles.buttoRocket}
@@ -63,9 +63,7 @@ export const About = () => {
           </MButton>
           <MButton
             custom={3}
-            variants={
-              window.screen.width > 770 ? animateY50 : animateAppearance
-            }
+            variants={isWidth > 770 ? animateY50 : animateAppearance}
             title=""
             textForScreenReaders=""
           >
@@ -73,9 +71,7 @@ export const About = () => {
           </MButton>
           <MButton
             custom={4}
-            variants={
-              window.screen.width > 770 ? animateY50 : animateAppearance
-            }
+            variants={isWidth > 770 ? animateY50 : animateAppearance}
             title="Перейти к службе поддержки"
             textForScreenReaders="Перейти к службе поддержки"
             onClick={handleTG}

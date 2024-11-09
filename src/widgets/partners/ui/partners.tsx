@@ -22,7 +22,7 @@ export const Partners = () => {
     handleSupportClick,
   } = usePartners();
 
-  const {animateAppearance, animateY50} = useMyAnimated()
+  const { animateAppearance, animateY50 } = useMyAnimated();
 
   return (
     <section className={styles.partnersContainer}>

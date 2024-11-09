@@ -11,10 +11,10 @@ const useHeaderLogic = () => {
     });
     setNavBar(false);
   };
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1025);
 
   useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth > 1024);
+    const handleResize = () => setIsDesktop(window.innerWidth > 1025);
 
     window.addEventListener("resize", handleResize);
 
@@ -31,7 +31,7 @@ const useHeaderLogic = () => {
     { id: 769, headerCommunity: 1100, headerLern: 3340, headerRoadMap: 4400 },
     { id: 1024, headerCommunity: 1050, headerLern: 2485, headerRoadMap: 3180 },
     { id: 1441, headerCommunity: 1820, headerLern: 4350, headerRoadMap: 5600 },
-    { id: 1920!, headerCommunity: 1200, headerLern: 1200, headerRoadMap: 1200 },
+    { id: 1920, headerCommunity: 1900, headerLern: 4650, headerRoadMap: 5840 },
   ];
 
   const funcScrollingTo = (isScreening: number) => {

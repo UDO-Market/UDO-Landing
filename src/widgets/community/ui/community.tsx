@@ -14,7 +14,7 @@ export const Community = () => {
 
   const { isTablet, isMobile, communityData } = useCommunity();
 
-  const { animateYMinus50, animateYMinus100, animateAppearance} =
+  const { animateYMinus50, animateYMinus100, animateAppearance } =
     useMyAnimated();
 
   return (
@@ -43,7 +43,6 @@ export const Community = () => {
             {...item}
           />
         ))}
-        
       </motion.div>
       {isMobile && (
         <MButton

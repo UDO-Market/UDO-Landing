@@ -37,7 +37,7 @@ export const MainStart = () => {
         >
           Market-Place
         </motion.h2>
-        
+
         <p>{t("mainDescription")} </p>
 
         <MButton

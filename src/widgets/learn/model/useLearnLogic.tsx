@@ -88,10 +88,10 @@ const useLearnLogic = () => {
     [descriptionLearn]
   );
 
-  const [isTablet, setIsTablet] = useState(window.innerWidth);
+  const [isWidth, setIsIsWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setIsTablet(window.innerWidth);
+    const handleResize = () => setIsIsWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
 
@@ -132,6 +132,8 @@ const useLearnLogic = () => {
     [buttonTexts, handleDescriptionClick, buttonRef]
   );
 
+  const learnInfoHeight = i18n.language == "ru" || isWidth > 480 ? "670px" : "607px"
+  
   return {
     selectedDescription,
     handleDescriptionClick,
@@ -140,7 +142,8 @@ const useLearnLogic = () => {
     t,
     i18n,
     learnButtonData,
-    isTablet,
+    isWidth,
+    learnInfoHeight
   };
 };
 
