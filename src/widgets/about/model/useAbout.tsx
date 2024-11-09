@@ -5,7 +5,7 @@ import duck_3 from "/duck/duck3.webm";
 import duck_4 from "/duck/duck4.webm";
 import duck_5 from "/duck/duck5.webm";
 
-export const useAbout = () => {
+const useAbout = () => {
   const [isWidth, setIsWidth] = useState(window.innerWidth);
 
   const gif_array = [duck_1, duck_2, duck_3, duck_4, duck_5];
@@ -20,3 +20,4 @@ export const useAbout = () => {
 
   return { isWidth, gif_array };
 };
+export default useAbout

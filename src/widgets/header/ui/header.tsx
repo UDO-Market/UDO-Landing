@@ -1,21 +1,31 @@
 import styles from "./header.module.scss";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
-import { useHeaderLogic } from "../model/useHeaderLogic";
+import useMyTranslate from "../../../app/translationText/useMyTranslate";
+import useHeaderLogic from "../model/useHeaderLogic";
+import useMyAnimated from "../../../app/animated/useMyAnimated";
+import { motion } from "framer-motion";
 import { NavigationHeader } from "../../../shared/ui/navigationHeader";
-import { NavigationBar } from "../../../shared/ui/navigationBar";
 import { NavigationBarItem } from "../../../shared/ui/navigationBarItem";
+import { MNavigationBar } from "../../../shared/ui/navigationBar";
 import { Logo } from "../../../shared/ui/logo";
 
 export const Header = () => {
+  
   const { t, i18n, changeLanguages } = useMyTranslate();
   const { navBar, setNavBar, scrollHeader } = useHeaderLogic();
-  
+
+  const {animateYMinus50, animateAppearance} = useMyAnimated()
+
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        
+      <motion.div
+        initial={window.screen.width > 1025 && animateYMinus50.hidden}
+        whileInView={
+          window.screen.width > 1025 ? animateYMinus50.visible : "none"
+        }
+        viewport={{ amount: 0.2 }}
+        className={styles.container}
+      >
         <Logo />
-
         <NavigationHeader
           i18n={i18n}
           t={t}
@@ -24,11 +34,16 @@ export const Header = () => {
           setNavBar={setNavBar}
           scrollHeader={scrollHeader}
         />
-      </div>
+      </motion.div>
 
-      <NavigationBar isOpen={navBar} className={styles.navigationBar}>
-        <NavigationBarItem scrollHeader={scrollHeader} t={t}/>
-      </NavigationBar>
+      <MNavigationBar
+        initial={animateAppearance.hidden}
+        whileInView={animateAppearance.visible(0)}
+        isOpen={navBar}
+        className={styles.navigationBar}
+      >
+        <NavigationBarItem scrollHeader={scrollHeader} t={t} />
+      </MNavigationBar>
     </header>
   );
 };

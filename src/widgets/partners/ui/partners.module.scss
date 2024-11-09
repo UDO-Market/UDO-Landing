@@ -1,6 +1,7 @@
 .partnersContainer {
     padding-top: 156px;
     margin-bottom: 260px;
+    overflow: hidden;
 
     .partnersHeading {
         display: flex;
@@ -153,7 +154,7 @@
     }
 
     .modalContentPartners {
-        width: 100%;
+        width: 55%;
         height: 410px;
         border-radius: 10px;
 
@@ -193,12 +194,12 @@
             margin-bottom: 64px;
 
             h3 {
-                font-size: 48px;
+                font-size: 43px;
             }
 
             img {
-                width: 58px;
-                height: 58px;
+                width: 55px;
+                height: 55px;
             }
         }
 
@@ -214,19 +215,19 @@
     }
 
     .modalContentPartners {
-        width: 90%;
+        width: 78%;
 
         .gif7Dugs {
             width: 35%;
         }
 
         p {
-            width: 65%;
+            width: 75%;
         }
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 483px) {
     .partnersContainer {
         padding-top: 84px;
 
@@ -280,8 +281,7 @@
         }
 
         p {
-            width: 70%;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         button {
@@ -304,12 +304,12 @@
 
             h3 {
                 margin-right: 10px;
-                font-size: 27px;
+                font-size: 26px;
             }
 
             img {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
             }
 
         }

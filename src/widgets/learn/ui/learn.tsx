@@ -1,22 +1,43 @@
 import styles from "./learn.module.scss";
-import { useLearnLogic } from "../model/useLearnLogic";
+import useLearnLogic from "../model/useLearnLogic";
+import useMyAnimated from "../../../app/animated/useMyAnimated";
+import { motion } from "framer-motion";
 import { LearnButton } from "../../../shared/ui/learnButton";
 import icon_learn from "/svg/icon_learn.svg";
 
 export const Learn = () => {
   const { selectedDescription, t, i18n, isTablet, learnButtonData } =
     useLearnLogic();
+    
+  const { animateAppearance } = useMyAnimated();
 
   return (
     <section className={styles.learnContainer}>
-      <div className={styles.learnHeading}>
+      <motion.div
+        initial={animateAppearance.hidden}
+        whileInView={animateAppearance.visible(1)}
+        viewport={{ amount: 0.2 }}
+        className={styles.learnHeading}
+      >
         <h3>{t("sectionLearnTitle")}</h3>
         <img src={icon_learn} alt="icon_learn" />
-      </div>
+      </motion.div>
 
-      <p className={styles.learnProtectText}>{t("sectionLearnDescription")}</p>
+      <motion.p
+        initial={animateAppearance.hidden}
+        whileInView={animateAppearance.visible(2)}
+        viewport={{ amount: 0.2 }}
+        className={styles.learnProtectText}
+      >
+        {t("sectionLearnDescription")}
+      </motion.p>
 
-      <aside className={styles.learnMainInfoAndImg}>
+      <motion.aside
+        initial={animateAppearance.hidden}
+        whileInView={animateAppearance.visible(3)}
+        viewport={{ amount: 0.2 }}
+        className={styles.learnMainInfoAndImg}
+      >
         <div
           className={
             isTablet >= 769
@@ -61,7 +82,7 @@ export const Learn = () => {
         <div className={styles.learnImg}>
           <img src={selectedDescription.imgDescription} alt="Img description" />
         </div>
-      </aside>
+      </motion.aside>
     </section>
   );
 };

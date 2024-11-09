@@ -1,1 +1,1 @@
-export { CommunityCard } from './communityCard'
+export { MCommunityCard } from './communityCard'

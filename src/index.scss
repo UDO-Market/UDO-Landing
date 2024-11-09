@@ -1,4 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url('/public/fonts/Inter_18pt-Medium.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: url('/public/fonts/Inter_18pt-SemiBold.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 700;
+  src: url('/public/fonts/Inter_18pt-Bold.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 800;
+  src: url('/public/fonts/Inter_18pt-ExtraBold.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('/public/fonts/Roboto-Bold.ttf') format('ttf');
+}
+
 
 * {
   margin: 0;

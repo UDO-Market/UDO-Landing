@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
+import useMyTranslate  from "../../../app/translationText/useMyTranslate";
 import block from "/svg/block.svg";
 import contact from "/svg/contract.svg";
 import toncoin2 from "/svg/toncoin2.svg";
-export const useLearnLogic = () => {
+const useLearnLogic = () => {
   const { t, i18n } = useMyTranslate();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -143,3 +143,5 @@ export const useLearnLogic = () => {
     isTablet,
   };
 };
+
+export default useLearnLogic

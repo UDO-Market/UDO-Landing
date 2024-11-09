@@ -1,14 +1,16 @@
 import styles from "./communityCard.module.scss";
-import { useCommunityCard } from "../../lib/useCommunityCard";
+import useCommunityCard from "../../lib/useCommunityCard";
 import { TCommunityCard } from "../../types/TCommunityCard";
+import { forwardRef, Ref } from "react";
+import { motion } from "framer-motion";
 
-export const CommunityCard = ({
+const CommunityCard = forwardRef(({
   icon,
   name,
   descr,
   url,
   aboutBtn,
-}: TCommunityCard) => {
+}: TCommunityCard, ref: Ref<HTMLElement>) => {
   
   const { hover, setHover, windowWidth, paragraphWidth } = useCommunityCard();
 
@@ -17,6 +19,7 @@ export const CommunityCard = ({
       className={styles.cardMain}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      ref={ref}
     >
       <img src={icon} alt="name" />
 
@@ -40,4 +43,6 @@ export const CommunityCard = ({
       </a>
     </article>
   );
-};
+})
+
+export const MCommunityCard = motion.create(CommunityCard)

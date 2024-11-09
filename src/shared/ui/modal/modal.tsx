@@ -1,7 +1,7 @@
 import styles from "./modal.module.scss";
 import { TModal } from "../../types/TModal";
 
-export const Modal = ({ children, isOpen, className }: TModal) => {
+export const Modal = ({ children, isOpen, className}: TModal) => {
   return (
     <div
       className={styles.modal}

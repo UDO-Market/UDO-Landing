@@ -1,6 +1,7 @@
 .roadMapSection {
     padding-top: 156px;
     margin-bottom: 204px;
+    overflow: hidden;
 }
 
 .titleContainer {
@@ -25,7 +26,6 @@
     display: flex;
     position: relative;
     gap: 28px;
-    font-family: Inter, sans-serif;
     color: #fff;
     font-weight: 700;
     flex-wrap: wrap;
@@ -132,7 +132,7 @@
         margin-bottom: 31px;
 
         h4 {
-            width: 120px;
+            width: 125px;
             font-size: 26px;
         }
     }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { handleTG } from "../../../features/handleTG/handleTG";
 
-export const useHeaderLogic = () => {
+const useHeaderLogic = () => {
   const [navBar, setNavBar] = useState(false);
 
   const scrollHeader = (height: number) => {
@@ -27,10 +27,10 @@ export const useHeaderLogic = () => {
     [key: string]: number;
   };
   const scrollingToParams: TScrollingParams[] = [
-    { id: 480, headerCommunity: 850, headerLern: 2640, headerRoadMap: 3630 },
-    { id: 769, headerCommunity: 1340, headerLern: 3480, headerRoadMap: 4560 },
-    { id: 1024, headerCommunity: 1020, headerLern: 2485, headerRoadMap: 3120 },
-    { id: 1441, headerCommunity: 1820, headerLern: 4300, headerRoadMap: 5520 },
+    { id: 480, headerCommunity: 900, headerLern: 2620, headerRoadMap: 3630 },
+    { id: 769, headerCommunity: 1100, headerLern: 3340, headerRoadMap: 4400 },
+    { id: 1024, headerCommunity: 1050, headerLern: 2485, headerRoadMap: 3180 },
+    { id: 1441, headerCommunity: 1820, headerLern: 4350, headerRoadMap: 5600 },
     { id: 1920!, headerCommunity: 1200, headerLern: 1200, headerRoadMap: 1200 },
   ];
 
@@ -72,3 +72,5 @@ export const useHeaderLogic = () => {
 
   return { navBar, setNavBar, scrollHeader, isDesktop, buttonParamScroll };
 };
+
+export default useHeaderLogic

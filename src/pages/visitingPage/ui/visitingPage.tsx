@@ -9,7 +9,7 @@ import { RoadMap } from "../../../widgets/roadMap";
 import { Footer } from "../../../widgets/footer";
 import { Learn } from "../../../widgets/learn";
 
-export const VisitingPage = () => {
+const VisitingPage = () => {
   return (
     <>
       <div className={styles.visitingPageWhiteContainer}>
@@ -43,3 +43,5 @@ export const VisitingPage = () => {
     </>
   );
 };
+
+export default VisitingPage

@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { handleTG } from "../../../features/handleTG/handleTG";
-import { useModal } from "../../../shared/ui/modal/useModal";
+import useModal from "../../../shared/ui/modal/useModal";
 
-export const usePartners = () => {
+const usePartners = () => {
     const { modal, setModal } = useModal();
 
     const partnersData = useMemo(() => [
@@ -15,7 +15,7 @@ export const usePartners = () => {
         {
           id: 2,
           src: "/icons/move_partner.webp",
-          atl: "Move partner",
+          alt: "Move partner",
           href: "https://t.me/moveonton"
         }
       ], [])
@@ -28,3 +28,5 @@ export const usePartners = () => {
       };
     return {partnersData, handleModalToggle, handleSupportClick, modal, setModal}
 }
+
+export default usePartners

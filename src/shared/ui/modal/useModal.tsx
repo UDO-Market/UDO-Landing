@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export const useModal = () => {
+const useModal = () => {
     const [modal, setModal] = useState(false);
 
     useEffect(() => {
@@ -15,3 +15,4 @@ export const useModal = () => {
         setModal
       }
 }
+export default useModal

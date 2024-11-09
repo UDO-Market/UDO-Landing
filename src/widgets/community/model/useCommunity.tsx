@@ -2,19 +2,22 @@ import { useEffect, useState } from "react";
 import telegram_icon from "/svg/icon_telegram.svg";
 import github_icon from "/svg/icon_gitHub.svg";
 import twitter_icon from "/svg/icon_twitter.svg";
-import { useMyTranslate } from "../../../app/translationText/useMyTranslate";
-export const useCommunity = () => {
+import useMyTranslate  from "../../../app/translationText/useMyTranslate";
+const useCommunity = () => {
     
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth >= 480);
+  const [isTablet, setIsTablet] = useState(window.innerWidth >= 770);
   const {t} = useMyTranslate()
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 480);
-
+    const handleResize = () => setIsMobile(window.innerWidth >= 480);
+    const handleTabletResize = () => setIsTablet(window.innerWidth >= 770);
     window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleTabletResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {window.removeEventListener("resize", handleResize)
+      window.removeEventListener("resize", handleTabletResize)
+    };
   });
 
   const communityData = [
@@ -44,5 +47,7 @@ export const useCommunity = () => {
     },
   ];
 
-  return { isMobile, communityData };
+  return { isTablet, isMobile, communityData };
 };
+
+export default useCommunity

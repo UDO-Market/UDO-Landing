@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { useMyTranslate } from "../../app/translationText/useMyTranslate";
+import useMyTranslate from "../../app/translationText/useMyTranslate";
 
-export const useCommunityCard = () => {
+const useCommunityCard = () => {
   const [hover, setHover] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { i18n } = useMyTranslate();
@@ -29,3 +29,5 @@ export const useCommunityCard = () => {
 
   return { hover, setHover, paragraphWidth, windowWidth };
 };
+
+export default useCommunityCard

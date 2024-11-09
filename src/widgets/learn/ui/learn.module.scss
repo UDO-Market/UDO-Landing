@@ -2,6 +2,7 @@
     margin-bottom: 204px;
     color: white;
     padding-top: 156px;
+    overflow: hidden;
 }
 
 .learnHeading {
@@ -95,11 +96,14 @@
 @media screen and (max-width: 1440px) {
     .learnContent {
         padding-top: 50px;
-        height: 520px;
+        height: 540px;
     }
     .learnMainInfoAndImg {
         width: 100%;
         margin: 0 auto;
+    }
+    .learnContent{
+        padding-top: 30px;
     }
     .learnBtnsAndFAQ{
         width: 30%;

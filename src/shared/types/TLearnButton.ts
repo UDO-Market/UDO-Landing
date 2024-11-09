@@ -1,4 +1,5 @@
-import { TButton } from "./TButton";
+import { LegacyRef} from "react";
+
 export type TLearnButton = {
     onClick: () => void,
     imgSrc: string,
@@ -6,4 +7,5 @@ export type TLearnButton = {
     title: string,
     textForScreenReaders: string,
     text: string,
-  } & Pick<TButton, "refButton">
+    refButton?: LegacyRef<HTMLButtonElement>
+  }
