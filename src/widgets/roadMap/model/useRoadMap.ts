@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import roadMap_line from "/icons/roadMap_line.png";
-import roadMap_line_mobilka from "/icons/roadMap_line_mobile.png";
-import roadMap_line_tablet from "/icons/roadMap_line_tablet.png";
+import roadMap_line from "/icons/roadMap_line.avif";
+import roadMap_line_mobilka from "/icons/roadMap_line_mobile.avif";
+import roadMap_line_tablet from "/icons/roadMap_line_tablet.avif";
 const useRoadMap = () => {
   
   const [isScreen, setIsScreen] = useState(window.innerWidth);
