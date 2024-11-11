@@ -12,7 +12,7 @@ import question_icon from "/svg/question.svg";
 export const Community = () => {
   const { t } = useMyTranslate();
 
-  const { isTablet, isMobile, communityData } = useCommunity();
+  const { isMobile, communityData } = useCommunity();
 
   const { animateYMinus50, animateYMinus100, animateAppearance } =
     useMyAnimated();
@@ -38,7 +38,7 @@ export const Community = () => {
         {communityData.map((item) => (
           <MCommunityCard
             custom={item.id}
-            variants={isTablet ? animateYMinus100 : animateAppearance}
+            variants={window.screen.width > 769 ? animateYMinus100 : animateAppearance}
             key={item.id}
             {...item}
           />

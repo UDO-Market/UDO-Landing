@@ -11,16 +11,16 @@ import { Logo } from "../../../shared/ui/logo";
 export const Header = () => {
   
   const { t, i18n, changeLanguages } = useMyTranslate();
-  const { isDesktop, navBar, setNavBar, scrollHeader } = useHeaderLogic();
+  const { navBar, setNavBar, scrollHeader } = useHeaderLogic();
 
   const { animateYMinus50 } = useMyAnimated()
 
   return (
     <header className={styles.header}>
       <motion.div
-        initial={isDesktop && animateYMinus50.hidden}
+        initial={window.screen.width > 1025 ? animateYMinus50.hidden : 'none'}
         whileInView={
-          isDesktop ? animateYMinus50.visible : "none"
+          window.screen.width > 1025 ? animateYMinus50.visible : "none"
         }
         viewport={{ amount: 0.2 }}
         className={styles.container}

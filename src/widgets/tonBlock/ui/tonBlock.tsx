@@ -9,7 +9,7 @@ import toncoin from "/svg/icon_toncoin.svg";
 
 export const TonBlock = () => {
   const { t } = useMyTranslate();
-  const {animateXMinus100, animateAppearance} = useMyAnimated()
+  const {animateXMinus100} = useMyAnimated()
  
   return (
     <section className={styles.tonBlock}>
@@ -38,8 +38,8 @@ export const TonBlock = () => {
       </motion.div>
 
       <MButton
-      initial={animateAppearance.hidden}
-      whileInView={animateAppearance.visible(2)}
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
       viewport={{ amount: 0.2 }}
         title="Установить кошелёк"
         textForScreenReaders="Установить кошелёк"
