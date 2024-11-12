@@ -19,14 +19,6 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        transition: .5s;
-
-        &:hover {
-            box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
-            background: white;
-            color: black;
-            padding-left: 47px;
-        }
 
         img {
             width: 62px;
@@ -101,10 +93,6 @@
             font-size: 19px;
             border-radius: 15px;
     
-            &:hover {
-                padding-left: 41px;
-            }
-    
             img {
                 width: 40px;
                 height: 40px;
@@ -149,10 +137,6 @@
             width: 222px;
             height: 56px;
             font-size: 24px;
-    
-            &:hover {
-                padding-left: 32px;
-            }
 
             img {
                 width: 36px;
@@ -186,10 +170,6 @@
         button {
             width: 197px;
             font-size: 18px;
-    
-            &:hover {
-                padding-left: 35px;
-            }
         }
     }
 
@@ -231,7 +211,4 @@
             margin-bottom: 20px;
         }
     }
-}
-@media screen and (max-width: 375px) {
-    
 }

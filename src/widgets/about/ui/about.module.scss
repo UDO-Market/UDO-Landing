@@ -42,6 +42,7 @@
 
 .aboutButtons {
     display: flex;
+
     button {
         width: 24%;
         height: 84px;
@@ -51,33 +52,22 @@
         box-sizing: border-box;
         border-radius: 15px;
         border: 4px solid #00A3FF;
-        background: white;
+        background-color: white;
         color: black;
         font-size: 30px;
         font-weight: 700;
-        transition: .5s;
         cursor: pointer;
 
         &:first-child {
             margin-right: 5.4%;
-            background: #00A3FF;
+            background-color: #00A3FF;
             color: white;
-
-            &:hover {
-                background: white;
-                color: #000;
-                padding-left: 44px;
-            }
         }
 
         &:last-child {
             margin-left: 5.4%;
         }
 
-        &:hover {
-            background: #00A3FF;
-            color: white;
-        }
         img {
             width: 44px;
             height: 44px;
@@ -91,6 +81,7 @@
 .gifBlock {
     position: relative;
     margin-left: 12%;
+
     video {
         width: 380px;
         height: 380px;
@@ -170,12 +161,6 @@
 
             &:first-child {
                 margin-right: 5%;
-
-                &:hover {
-                    background: white;
-                    color: #000;
-                    padding-left: 37px;
-                }
             }
 
             &:last-child {
@@ -240,11 +225,6 @@
             background: #00A3FF;
             color: white;
 
-            &:hover {
-                padding-left: 44px;
-                background: white;
-                color: black;
-            }
 
             img {
                 width: 36px;
@@ -262,7 +242,6 @@
             color: black;
             font-size: 20px;
             font-weight: 700;
-            transition: .5s;
             cursor: pointer;
 
             &:last-child {
@@ -284,6 +263,7 @@
     }
 
 }
+
 @media screen and (max-width: 620px) {
     .aboutHeader {
         h2 {
@@ -308,11 +288,6 @@
             background: #00A3FF;
             color: white;
 
-            &:hover {
-                padding-left: 44px;
-                background: white;
-                color: black;
-            }
 
             img {
                 width: 33px;
@@ -330,7 +305,6 @@
             color: black;
             font-size: 17px;
             font-weight: 700;
-            transition: .5s;
             cursor: pointer;
 
             &:last-child {
@@ -346,6 +320,7 @@
         }
     }
 }
+
 @media screen and (max-width: 481px) {
     .about {
         display: flex;
@@ -368,9 +343,6 @@
     .aboutButtonsMobileAdaptiv {
         .buttoRocket {
             width: 99%;
-            &:hover {
-                padding-left: 30px;
-            }
 
             img {
                 width: 26px;
@@ -401,9 +373,10 @@
 }
 
 @media screen and (max-width: 425px) {
-    .about{
+    .about {
         position: relative;
     }
+
     .aboutHeader {
         h2 {
             font-size: 32px;
@@ -417,9 +390,6 @@
     .aboutButtonsMobileAdaptiv {
         .buttoRocket {
             width: 60%;
-            &:hover {
-                padding-left: 30px;
-            }
 
             img {
                 width: 26px;
@@ -427,16 +397,19 @@
                 margin-left: 4px;
             }
         }
+
         button {
             width: 28%;
             font-size: 12px;
         }
     }
+
     .gifBlock {
         margin-left: 0%;
         position: absolute;
         top: 100px;
         right: 2%;
+
         video {
             width: 100px;
             height: 100px;

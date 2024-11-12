@@ -12,11 +12,10 @@ import question_icon from "/svg/question.svg";
 export const Community = () => {
   const { t } = useMyTranslate();
 
-  const { isMobile, communityData } = useCommunity();
+  const { isTablet, isMobile, communityData } = useCommunity();
 
   const { animateYMinus50, animateYMinus100, animateAppearance } =
     useMyAnimated();
-
   return (
     <section className={styles.communitySection}>
       <motion.div
@@ -24,6 +23,7 @@ export const Community = () => {
         whileInView={animateYMinus50.visible}
         viewport={{ amount: 0.2 }}
         className={styles.communityHeader}
+     
       >
         <h3>{t("sectionCommunityTitle")}</h3>
         <img src={user_icon} alt="user_icon" className={styles.userIcon} />
@@ -38,7 +38,7 @@ export const Community = () => {
         {communityData.map((item) => (
           <MCommunityCard
             custom={item.id}
-            variants={window.screen.width > 769 ? animateYMinus100 : animateAppearance}
+            variants={isTablet ? animateYMinus100 : animateAppearance}
             key={item.id}
             {...item}
           />
@@ -47,7 +47,8 @@ export const Community = () => {
       {isMobile && (
         <MButton
           initial={animateAppearance.hidden}
-          whileInView={animateAppearance.visible(2)}
+          whileInView={animateAppearance.visible(1)}
+          whileHover={{scale: 1.03, transition: { duration: 0.5 }}}
           viewport={{ amount: 0.2 }}
           title="Связаться с нами"
           textForScreenReaders="Связаться с нами"

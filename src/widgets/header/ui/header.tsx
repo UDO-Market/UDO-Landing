@@ -9,19 +9,16 @@ import { MNavigationBar } from "../../../shared/ui/navigationBar";
 import { Logo } from "../../../shared/ui/logo";
 
 export const Header = () => {
-  
   const { t, i18n, changeLanguages } = useMyTranslate();
-  const { navBar, setNavBar, scrollHeader } = useHeaderLogic();
+  const { isDesktop, navBar, setNavBar, scrollHeader } = useHeaderLogic();
 
-  const { animateYMinus50 } = useMyAnimated()
+  const { animateYMinus50 } = useMyAnimated();
 
   return (
     <header className={styles.header}>
       <motion.div
-        initial={window.screen.width > 1025 ? animateYMinus50.hidden : 'none'}
-        whileInView={
-          window.screen.width > 1025 ? animateYMinus50.visible : "none"
-        }
+        initial={isDesktop && animateYMinus50.hidden}
+        whileInView={isDesktop ? animateYMinus50.visible : 'none'}
         viewport={{ amount: 0.2 }}
         className={styles.container}
       >

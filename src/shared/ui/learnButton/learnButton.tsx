@@ -16,6 +16,7 @@ export const LearnButton = ({
       className={styles.learnButton}
       onClick={onClick}
       ref={refButton}
+      tabIndex={0}
     >
       <span
         style={{

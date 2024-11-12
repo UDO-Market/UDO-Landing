@@ -9,6 +9,8 @@ const Button = forwardRef(
     className,
     title,
     textForScreenReaders,
+    onMouseEnter,
+    onMouseLeave
   }: TButton, refButton: LegacyRef<HTMLButtonElement>) => {
     return (
       <button
@@ -16,6 +18,8 @@ const Button = forwardRef(
         onClick={onClick}
         className={className}
         title={title}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         <span style={{ display: "none" }}>{textForScreenReaders}</span>
         {children}

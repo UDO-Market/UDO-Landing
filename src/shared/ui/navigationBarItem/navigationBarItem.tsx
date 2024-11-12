@@ -3,7 +3,9 @@ import { TNavigationBarItem } from "../../types/TNavigationBarItem";
 import { MButton } from "../button/button";
 
 export const NavigationBarItem = ({scrollHeader, t}: TNavigationBarItem) => {
+
     const {buttonParamScroll} = useHeaderLogic()
+    
     return (
       <>
         {buttonParamScroll.map(({id, scrollingTo, titleKey, onClick}) => (

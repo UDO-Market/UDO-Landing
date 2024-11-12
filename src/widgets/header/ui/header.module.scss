@@ -23,7 +23,6 @@
         background: white;
     }
     .container {
-        display: flex;
         position: relative;
         justify-content: space-between;
     }
@@ -37,7 +36,6 @@
         padding-top: 30px;
         background-color: rgba(33, 33, 33, 0.99);
         backdrop-filter: blur(8px);
-
         li {
             padding-left: 6%;
             list-style: none;
@@ -50,6 +48,7 @@
             }
         }
     }
+    
 }
 @media screen and (max-width: 770px) {
     .header {
@@ -86,3 +85,4 @@
         }
     }
 }
+

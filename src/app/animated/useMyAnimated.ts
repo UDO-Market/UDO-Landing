@@ -88,10 +88,22 @@ const useMyAnimated = () => {
       transition: { delay: custom * 0.2 },
     }),
   };
+  const animateYMinus20 = {
+    hidden: {
+      y: -20,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
 
   return {
     animateAppearance,
     animateY20,
+    animateYMinus20,
     animateY50,
     animateYMinus50,
     animateYMinus100,
