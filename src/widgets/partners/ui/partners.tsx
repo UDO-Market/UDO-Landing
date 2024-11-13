@@ -8,7 +8,7 @@ import { MButton } from "../../../shared/ui/button/button";
 import { Cross } from "../../../shared/ui/cross/cross";
 import duck_7 from "/duck/duck7.webm";
 import icon_partners from "/svg/icon_partners.svg";
-import icon_tg from "/svg/icon_telegram.svg";
+import icon_tg from "/icons/icon_telegram.webp";
 import add_new_partners from "/icons/add_new_partners.webp";
 
 export const Partners = () => {

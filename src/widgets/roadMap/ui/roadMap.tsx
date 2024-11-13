@@ -5,7 +5,7 @@ import useMyAnimated from "../../../app/animated/useMyAnimated";
 import { motion } from "framer-motion";
 import { quarters } from "../model/quarters";
 import { QuarterSection } from "../model/quarterSection";
-import icon_roadMap from "/svg/icon_roadMap.svg";
+import icon_roadMap from "/icons/icon_roadMap.webp";
 
 export const RoadMap = () => {
   const { t } = useMyTranslate();
@@ -25,6 +25,7 @@ export const RoadMap = () => {
         <h3>{t("sectionRoadMap")}</h3>
         <img src={icon_roadMap} alt="Road Map" />
       </motion.div>
+      
       <motion.div
         initial={animateYMinus100.hidden}
         whileInView={animateYMinus100.visible(2)}

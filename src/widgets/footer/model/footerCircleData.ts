@@ -12,7 +12,7 @@ export const footerCircleData = [
     },
     {
       id: 2,
-      href:"https://github.com/brokqwiks/UDO_",
+      href:"https://github.com/UDO-Market/UDO-Landing",
       imgSrc:github_footer,
       alt:"github_footer"
     },

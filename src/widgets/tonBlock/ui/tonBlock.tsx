@@ -1,4 +1,5 @@
 import styles from "./tonBlock.module.scss";
+import { useState } from "react";
 import useMyTranslate from "../../../app/translationText/useMyTranslate";
 import useMyAnimated from "../../../app/animated/useMyAnimated";
 import { motion } from "framer-motion";
@@ -6,8 +7,7 @@ import { MButton } from "../../../shared/ui/button/button";
 import { CardsBlock } from "../../../shared/ui/cardsBlock";
 import toncoin_icon3 from "/svg/toncoin3.svg";
 import toncoin_icon3_blue from "/svg/toncoin3_blue.svg";
-import toncoin from "/svg/icon_toncoin.svg";
-import { useState } from "react";
+import toncoin from "/icons/icon_toncoin.webp";
 
 export const TonBlock = () => {
   const { t } = useMyTranslate();

@@ -31,6 +31,7 @@
 
 .headerBlock {
     display: flex;
+    align-items: center;
     margin-bottom: 134px;
 
     h2 {
@@ -45,9 +46,8 @@
         }
     }
     img{
-        width: 96px;
-        height: 96px;
-        align-items: baseline;
+        width: 110px;
+        height: 110px;
     }
 }
 
@@ -107,7 +107,7 @@
         h2 {
             font-size: 42px;
             font-weight: 800;
-            margin-right: 16px;
+            margin-right: 10px;
         }
 
         img {
@@ -150,7 +150,10 @@
         margin-bottom: 54px;
         h2 {
             font-size: 48px;
-            margin-right: 15px;
+        }
+        img{
+            width: 55px;
+            height: 55px;
         }
     }
     .descriptionBlock {
@@ -178,6 +181,10 @@
         h2 {
             font-size: 34px;
             margin-right: 10px;
+        }
+        img{
+            width: 45px;
+            height: 4px;
         }
     }
     .descriptionBlock {

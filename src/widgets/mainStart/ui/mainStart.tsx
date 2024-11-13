@@ -8,7 +8,7 @@ import { Modal } from "../../../shared/ui/modal/modal";
 import { MButton } from "../../../shared/ui/button/button";
 import { Cross } from "../../../shared/ui/cross/cross";
 import duck_6 from "/duck/duck6.webm";
-import icons_tg from "/svg/icon_telegram.svg";
+import icons_tg from "/icons/icon_telegram.webp";
 
 export const MainStart = () => {
   const { animateXMinus50, animateX50 } = useMyAnimated();

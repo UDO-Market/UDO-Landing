@@ -3,7 +3,7 @@ import useLearnLogic from "../model/useLearnLogic";
 import useMyAnimated from "../../../app/animated/useMyAnimated";
 import { motion } from "framer-motion";
 import { LearnButton } from "../../../shared/ui/learnButton";
-import icon_learn from "/svg/icon_learn.svg";
+import icon_learn from "/icons/icon_learn.webp";
 
 export const Learn = () => {
   const { selectedDescription, t, isWidth, learnButtonData, learnInfoHeight } =

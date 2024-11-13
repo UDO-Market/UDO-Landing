@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import telegram_icon from "/svg/icon_telegram.svg";
-import github_icon from "/svg/icon_gitHub.svg";
-import twitter_icon from "/svg/icon_twitter.svg";
+import telegram_icon from "/icons/icon_telegram.webp";
+import github_icon from "/icons/icon_gitHub.webp";
+import twitter_icon from "/icons/icon_twitter.webp";
 import useMyTranslate  from "../../../app/translationText/useMyTranslate";
+
 const useCommunity = () => {
     
+  const {t} = useMyTranslate()
+  
   const [isMobile, setIsMobile] = useState(window.innerWidth >= 480);
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 770);
-  const {t} = useMyTranslate()
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth >= 480);
@@ -35,7 +37,7 @@ const useCommunity = () => {
       name: "GitHub",
       descr: t("sectionCardGitHubDesc"),
       aboutBtn: t("sectionCardButtonLearnCode"),
-      url: "https://github.com/brokqwiks/UDO_",
+      url: "https://github.com/UDO-Market/UDO-Landing",
     },
     {
       id: 3,
