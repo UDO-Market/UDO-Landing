@@ -9,8 +9,8 @@ lerna-debug.log*
 *.sw?
 
 node_modules
-dist
-dist-ssr
+# dist
+# dist-ssr
 *.local
 *.svg text eol=lf
 *.sw?
